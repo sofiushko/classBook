@@ -8,8 +8,6 @@ define('AppRouter', ['backbone'], function(Backbone) {
         },
 
         initialize: function(){
-            this.on('route:students', this.renderSrudents, this)
-            this.on('route:lectures', this.renderLectures, this)
             Backbone.history.start();
         },
         
@@ -19,12 +17,10 @@ define('AppRouter', ['backbone'], function(Backbone) {
 
         renderLectures: function() {
             console.log("lectures");
-
         },
 
         defaultAction: function() {
             console.log("defaultAction");
-
         },
      
         
