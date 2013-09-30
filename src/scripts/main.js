@@ -12,3 +12,7 @@
          'backbone': { exports: 'Backbone', deps: ['jquery', 'underscore'] }
     }
 });
+
+require (['AppRouter'], function (AppRouter) {
+        var appRouter = new AppRouter;;
+});
