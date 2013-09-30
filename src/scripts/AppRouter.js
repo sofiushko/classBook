@@ -1,4 +1,4 @@
-define('AppRouter', ['backbone'], function(Backbone) {
+define('AppRouter', ['backbone', 'StudentModel', 'StudentView'], function(Backbone, StudentModel, StudentView) {
     return Backbone.Router.extend({
  
         routes: {
@@ -12,7 +12,10 @@ define('AppRouter', ['backbone'], function(Backbone) {
         },
         
         renderSrudents: function() {
-            console.log("students");
+            var studentModel = new StudentModel();
+            var studentView = new StudentView({
+                model:studentModel
+            }).render();
         },
 
         renderLectures: function() {
@@ -21,7 +24,7 @@ define('AppRouter', ['backbone'], function(Backbone) {
 
         defaultAction: function() {
             console.log("defaultAction");
-        },
+        }
      
         
     });

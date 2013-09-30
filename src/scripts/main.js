@@ -4,6 +4,8 @@
             'jquery': 'vendor/jquery',
             'underscore': 'vendor/underscore',
             'backbone': 'vendor/backbone',
+            'StudentModel': 'models/StudentModel',
+            'StudentView': 'views/StudentView'
     }, 
 
     shim: {
@@ -14,5 +16,5 @@
 });
 
 require (['AppRouter'], function (AppRouter) {
-        var appRouter = new AppRouter;;
+        var appRouter = new AppRouter;
 });
