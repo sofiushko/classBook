@@ -1,8 +1,8 @@
-define ('StudentView', ['backbone', 'jquery'], function(Backbone, $){
+define ('StudentView', ['backbone', 'jquery', 'text!templates/student.template'], function(Backbone, $, student_templ){
     return Backbone.View.extend ({
         //tagName: "div",
         //className: "student",
-        template: _.template('<h1><%= first_name + last_name %></h1><img class="contact__photo" src="<%= link_photo %>" alt="<%= first_name %>" />'),
+        template: _.template( student_templ ),
         el: $(".classBook"),
 
         initialize: function(){

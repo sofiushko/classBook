@@ -1,0 +1,7 @@
+<div class="student">
+	<div class="student__photo-container">
+		<img class="student___photo" src="<%= link_photo %>" alt="<%= first_name %>" />
+	</div>
+	<p><%= first_name %></p>
+	<p><%= last_name %></p>
+</div>

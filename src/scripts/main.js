@@ -5,7 +5,9 @@
             'underscore': 'vendor/underscore',
             'backbone': 'vendor/backbone',
             'StudentModel': 'models/StudentModel',
-            'StudentView': 'views/StudentView'
+            'StudentView': 'views/StudentView',
+            'text' : 'vendor/text',
+            'templates': '../templates'
     }, 
 
     shim: {
