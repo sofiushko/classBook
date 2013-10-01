@@ -7,7 +7,9 @@
             'StudentModel': 'models/StudentModel',
             'StudentView': 'views/StudentView',
             'text' : 'vendor/text',
-            'templates': '../templates'
+            'templates': '../templates',
+            'StudentsPageView': 'views/StudentsPageView',
+            'StudentCollection': 'collections/StudentCollection',
     }, 
 
     shim: {
