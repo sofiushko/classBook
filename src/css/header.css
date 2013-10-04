@@ -1,0 +1,57 @@
+.header {
+    /*position: fixed;*/
+    background: #ffffff;
+    width: 100%; 
+    /*height: 80px;*/
+    box-shadow: 0 0px 5px rgba(0,0,0,0.2);
+    display: block;
+    z-index:10;
+    padding-bottom: 10px;
+}
+
+.header__menu {
+    text-align: left;
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: rgb(200, 200, 200);
+}
+
+.header__menu_item {
+    display: inline-block;
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+.header__title {
+    text-align: center;
+    font-size: 28px;
+    padding-bottom: 10px;
+}
+
+.header__menu_item{
+    margin-right: 25px;
+    margin-left: 10px;
+    border-width: 3px 0 0 0;
+    border-style: solid;
+    border-color: rgba(200,52,52,0);
+}
+
+.header__link{
+    text-decoration: none;
+    color: rgb(100, 100, 100)
+}
+
+.header__info:hover,  
+.header__info.active{
+    border-color: rgb(200,52,52);
+}
+
+.header__students:hover, 
+.header__students.active {
+    border-color: rgb(255,204,0);
+}
+
+.header__lectures:hover,  
+.header__lectures.active{
+    border-color: rgb(0,165,140);
+}

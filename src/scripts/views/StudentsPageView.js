@@ -7,8 +7,10 @@ define ('StudentsPageView', ['backbone', 'jquery', 'text!templates/studentsPage.
         },
 
         render: function() {
+            $('.header__menu_item').removeClass('active');
+            $('.header__menu_item a[href="'+window.location.hash+'"]').parent().addClass('active');
             this.$el.html(this.template());
-            this.collection.each(this.renderStudent, this);
+            this.collection.each(this.renderStudent, this); 
             return this;
         },
 

@@ -1,1 +1,13 @@
 @import url("reset.css");
+@import url("student.css");
+@import url("footer.css");
+@import url("header.css");
+@import url("studentPage.css");
+
+body {
+    font-family: 'Open Sans', arial, sans-serif;
+    background: #eeeeee;
+    width: 100%;
+    float:left;
+}
+

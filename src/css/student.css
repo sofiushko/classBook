@@ -1,0 +1,33 @@
+.student {
+    float:left;
+    background: #ffffff;
+    margin: .6em;
+    box-shadow: 0 0px 8px rgba(0,0,0,0.6);
+    position: relative;
+    z-index:0; 
+}
+
+
+.student:hover {
+    box-shadow: 0 0px 10px rgba(255,204,0,1);
+    cursor: pointer;
+}
+
+
+.student__photo-container {
+    overflow: hidden;
+}
+
+
+.student__photo {
+    height: 150px;
+    width: auto;
+    border: none;
+}
+
+
+.student__name-container {
+    font-size: 12px;
+    text-align: center;
+    padding: 5px 0;
+}

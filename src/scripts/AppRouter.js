@@ -1,4 +1,4 @@
-define('AppRouter', ['backbone', 'StudentCollection', 'StudentsPageView'], function(Backbone, StudentCollection, StudentsPageView) {
+define('AppRouter', ['backbone', 'StudentCollection', 'StudentsPageView', 'data'], function(Backbone, StudentCollection, StudentsPageView, data) {
     return Backbone.Router.extend({
  
         routes: {
@@ -12,8 +12,7 @@ define('AppRouter', ['backbone', 'StudentCollection', 'StudentsPageView'], funct
         },
         
         renderSrudents: function() {
-            var some_data =[ {first_name:"Mari"},{first_name:"Petr"}];
-            var studentCollection = new StudentCollection(some_data);
+            var studentCollection = new StudentCollection(data.students);
             var studentsPageView = new StudentsPageView({
                 collection: studentCollection
             }).render();

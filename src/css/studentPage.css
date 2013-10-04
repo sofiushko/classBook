@@ -1,0 +1,16 @@
+.studentPage {
+    margin-top: 10px;
+    float: left;
+}
+
+.studentPage__title  {
+    font-size: 28px;
+}
+
+.studentPage__students {
+    float:left;
+    margin-left: 2%;
+    margin-right: 2%;
+
+}
+
