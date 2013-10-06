@@ -1,0 +1,20 @@
+module "info"
+
+match / {
+    <div class="info">
+        <h1 class="info__title">{ .title }</h1>
+        <div class = "info__container">
+        for .text {
+            if .subtitle {
+              <h2 class="info__container_subtitle">{ .subtitle }</h2>
+            }
+              for .text {
+                if .susubtitle {
+                  <h3 class="info__container_susubtitle">{ .susubtitle }</h3>
+                }
+                <p class="info__container_text">{ html(.text) }</p>
+            }
+        }
+        </div>
+    </div>
+}

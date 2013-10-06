@@ -1,14 +1,14 @@
-define ('StudentView', ['backbone', 'jquery', 'text!templates/student.template'], function(Backbone, $, student_templ){
+define('StudentView', ['backbone', 'jquery', 'student.template'], function (Backbone, $) {
     return Backbone.View.extend ({
         tagName: "div",
         className: "student",
-        template: _.template( student_templ ),
-
+        
         initialize: function(){
         },
 
         render: function() {
-            this.$el.html(this.template(this.model.toJSON()));
+            var compiled_template = yr.run ('student', this.model.toJSON());
+            this.$el.html(compiled_template);
             return this;
         }
 

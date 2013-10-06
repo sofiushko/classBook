@@ -1,10 +1,11 @@
-define('AppRouter', ['backbone', 'StudentCollection', 'StudentsPageView', 'data'], function(Backbone, StudentCollection, StudentsPageView, data) {
+define('AppRouter', ['backbone', 'StudentsPageView', 'data', 'StudentModel', 'InfoView'], 
+    function(Backbone, StudentsPageView, data, StudentModel, InfoView) {
     return Backbone.Router.extend({
  
         routes: {
-          'students': 'renderSrudents',
-          'lectures': 'renderLectures',
-          '*actions': 'defaultAction'
+            'students': 'renderSrudents',
+            'lectures': 'renderLectures',
+            '*actions': 'defaultAction'
         },
 
         initialize: function(){
@@ -12,9 +13,8 @@ define('AppRouter', ['backbone', 'StudentCollection', 'StudentsPageView', 'data'
         },
         
         renderSrudents: function() {
-            var studentCollection = new StudentCollection(data.students);
             var studentsPageView = new StudentsPageView({
-                collection: studentCollection
+                collection: App.studentCollection
             }).render();
         },
 
@@ -22,10 +22,10 @@ define('AppRouter', ['backbone', 'StudentCollection', 'StudentsPageView', 'data'
             console.log("lectures");
         },
 
+
         defaultAction: function() {
-            console.log("defaultAction");
-        }
-     
-        
+            var infoView = new InfoView().render();
+        },
+       
     });
 });
