@@ -4,6 +4,8 @@
     width: 100%; 
     /*height: 80px;*/
     box-shadow: 0 0px 5px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 0px 5px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 0px 5px rgba(0,0,0,0.2);
     display: block;
     z-index:10;
     padding-bottom: 10px;
@@ -23,14 +25,13 @@
 }
 
 .header__title {
-    text-align: center;
     font-size: 28px;
     padding-bottom: 10px;
 }
 
 .header__menu_item{
     margin-right: 25px;
-    margin-left: 10px;
+    margin-left: 15px;
     border-width: 3px 0 0 0;
     border-style: solid;
     border-color: rgba(200,52,52,0);

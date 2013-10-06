@@ -2,7 +2,7 @@ define('data', [], function () {
     return {
 
         "about": {
-            "title": "ШРИ в Москве 2013",
+            "title": "Школа разработки интерфейсов",
             "text": [ 
                 {
                     "subtitle": "О школе",

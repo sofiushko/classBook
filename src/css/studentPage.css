@@ -4,13 +4,14 @@
 }
 
 .studentPage__title  {
-    font-size: 28px;
+    font-size: 24px;
+    margin-left: 15px;
 }
 
 .studentPage__students {
     float:left;
-    margin-left: 2%;
-    margin-right: 2%;
-
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 7px 10px;
 }
 
