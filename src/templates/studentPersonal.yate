@@ -11,7 +11,7 @@ match / {
                     if .link_facebook {
                         <li class =  "list_item"> 
                             <a class = "list-item-link link" href = "{ .link_facebook}" title="Facebook" target="_blank">
-                            <div class = "list_item_icon"></div>
+                            <div class = "icon_facebook icon"></div>
                             "Facebook"
                             </a>
                         </li>
@@ -19,7 +19,7 @@ match / {
                     if .link_vk {
                         <li class =  "list_item"> 
                             <a class = "list-item-link link" href = "{ .link_vk }" title="ВКонтакте" target="_blank">
-                            <div class = "list_item_icon"></div>
+                            <div class = "icon_vk icon"></div>
                             "ВКонтакте"
                             </a>
                         </li>
@@ -27,7 +27,7 @@ match / {
                     if .link_github {
                         <li class =  "list_item"> 
                             <a class = "list-item-link link" href = "{ .link_github }" title="GitHub" target="_blank">
-                            <div class = "list_item_icon"></div>
+                            <div class = "icon_github icon"></div>
                             "GitHub"
                             </a>
                         </li>
@@ -35,7 +35,7 @@ match / {
                     if .link_yaru {
                         <li class =  "list_item"> 
                             <a class = "list-item-link link" href = "{.link_yaru}" title="Я.ру" target="_blank">
-                            <div class = "list_item_icon"></div>
+                            <div class = "icon_ya icon"></div>
                             "Я.ру"
                             </a>
                         </li>
@@ -44,10 +44,10 @@ match / {
             </div>
             <div class = "personal__container_info">
                 if .link_photo !="" {
-                      <img class = "container_info_photo"  src="{ .link_photo }" alt="{ .first_name} {.last_name }"/> 
+                      <div class = "photo_container"><img class = "container_info_photo"  src="{ .link_photo }" alt="{ .first_name} {.last_name }"/></div> 
                     }
                 if .about != "" {
-                    <div class = "container_info_about">{ .about }</div>
+                    <div class = "container_info_about"><p>{ .about }</p></div>
                 }
             </div>
         </div>

@@ -4,9 +4,10 @@
 @import url("header.css");
 @import url("studentPage.css");
 @import url("info.css");
+@import url("studentPersonal.css");
 
 html {
-	height: 100%;
+    height: 100%;
 }
 
 body {

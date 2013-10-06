@@ -51,7 +51,7 @@ var yr = yr || require('yate/lib/runtime.js');
         if (simpleBoolean('link_facebook', c0)) {
             r0 += "<li class=\"" + "list_item" + "\">";
             r0 += "<a class=\"" + "list-item-link link" + "\" href=\"" + nodeset2attrvalue( ( selectNametest('link_facebook', c0, []) ) ) + "\" title=\"" + "Facebook" + "\" target=\"" + "_blank" + "\">";
-            r0 += "<div class=\"" + "list_item_icon" + "\"></div>";
+            r0 += "<div class=\"" + "icon_facebook icon" + "\"></div>";
             r0 += "Facebook";
             r0 += "</a>";
             r0 += "</li>";
@@ -59,7 +59,7 @@ var yr = yr || require('yate/lib/runtime.js');
         if (simpleBoolean('link_vk', c0)) {
             r0 += "<li class=\"" + "list_item" + "\">";
             r0 += "<a class=\"" + "list-item-link link" + "\" href=\"" + nodeset2attrvalue( ( selectNametest('link_vk', c0, []) ) ) + "\" title=\"" + "ВКонтакте" + "\" target=\"" + "_blank" + "\">";
-            r0 += "<div class=\"" + "list_item_icon" + "\"></div>";
+            r0 += "<div class=\"" + "icon_vk icon" + "\"></div>";
             r0 += "ВКонтакте";
             r0 += "</a>";
             r0 += "</li>";
@@ -67,7 +67,7 @@ var yr = yr || require('yate/lib/runtime.js');
         if (simpleBoolean('link_github', c0)) {
             r0 += "<li class=\"" + "list_item" + "\">";
             r0 += "<a class=\"" + "list-item-link link" + "\" href=\"" + nodeset2attrvalue( ( selectNametest('link_github', c0, []) ) ) + "\" title=\"" + "GitHub" + "\" target=\"" + "_blank" + "\">";
-            r0 += "<div class=\"" + "list_item_icon" + "\"></div>";
+            r0 += "<div class=\"" + "icon_github icon" + "\"></div>";
             r0 += "GitHub";
             r0 += "</a>";
             r0 += "</li>";
@@ -75,7 +75,7 @@ var yr = yr || require('yate/lib/runtime.js');
         if (simpleBoolean('link_yaru', c0)) {
             r0 += "<li class=\"" + "list_item" + "\">";
             r0 += "<a class=\"" + "list-item-link link" + "\" href=\"" + nodeset2attrvalue( ( selectNametest('link_yaru', c0, []) ) ) + "\" title=\"" + "Я.ру" + "\" target=\"" + "_blank" + "\">";
-            r0 += "<div class=\"" + "list_item_icon" + "\"></div>";
+            r0 += "<div class=\"" + "icon_ya icon" + "\"></div>";
             r0 += "Я.ру";
             r0 += "</a>";
             r0 += "</li>";
@@ -84,10 +84,10 @@ var yr = yr || require('yate/lib/runtime.js');
         r0 += "</div>";
         r0 += "<div class=\"" + "personal__container_info" + "\">";
         if (!(cmpSN("", selectNametest('link_photo', c0, [])))) {
-            r0 += "<img class=\"" + "container_info_photo" + "\" src=\"" + nodeset2attrvalue( ( selectNametest('link_photo', c0, []) ) ) + "\" alt=\"" + nodeset2attrvalue( ( selectNametest('first_name', c0, []) ) ) + " " + nodeset2attrvalue( ( selectNametest('last_name', c0, []) ) ) + "\"/>";
+            r0 += "<div class=\"" + "photo_container" + "\"><img class=\"" + "container_info_photo" + "\" src=\"" + nodeset2attrvalue( ( selectNametest('link_photo', c0, []) ) ) + "\" alt=\"" + nodeset2attrvalue( ( selectNametest('first_name', c0, []) ) ) + " " + nodeset2attrvalue( ( selectNametest('last_name', c0, []) ) ) + "\"/></div>";
         }
         if (!(cmpSN("", selectNametest('about', c0, [])))) {
-            r0 += "<div class=\"" + "container_info_about" + "\">" + nodeset2xml( ( selectNametest('about', c0, []) ) ) + "</div>";
+            r0 += "<div class=\"" + "container_info_about" + "\"><p>" + nodeset2xml( ( selectNametest('about', c0, []) ) ) + "</p></div>";
         }
         r0 += "</div>";
         r0 += "</div>";
