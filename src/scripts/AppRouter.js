@@ -1,11 +1,13 @@
-define('AppRouter', ['backbone', 'StudentsPageView', 'data', 'StudentModel', 'InfoView'], 
-    function(Backbone, StudentsPageView, data, StudentModel, InfoView) {
+define('AppRouter', ['backbone', 'StudentsPageView', 'data', 'StudentModel', 'InfoView', "StudentPersonalView"], 
+    function(Backbone, StudentsPageView, data, StudentModel, InfoView, StudentPersonalView) {
     return Backbone.Router.extend({
  
         routes: {
             'students': 'renderSrudents',
             'lectures': 'renderLectures',
-            '*actions': 'defaultAction'
+            'students/:student' : 'renderPersonalData',
+            '*actions': 'defaultAction',
+            
         },
 
         initialize: function(){
@@ -25,6 +27,12 @@ define('AppRouter', ['backbone', 'StudentsPageView', 'data', 'StudentModel', 'In
 
         defaultAction: function() {
             var infoView = new InfoView().render();
+        },
+
+        renderPersonalData: function(student) {
+            var studentPersonalView = new StudentPersonalView({
+                model: App.studentCollection.get(student)
+            }).render();
         },
        
     });

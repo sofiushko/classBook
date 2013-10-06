@@ -15,6 +15,8 @@
         'info.template': '../templates/info.template',
         'InfoView': 'views/InfoView',
         'backbone.localstorage': 'vendor/backbone.localStorage',
+        'StudentPersonalView': 'views/StudentPersonalView',
+        'studentPersonal.template': '../templates/studentPersonal.template',
     }, 
 
     shim: {
@@ -24,6 +26,7 @@
         'student.template': { deps: ['runtime'] },
         'info.template': { deps: ['runtime'] },
         'backbone.localstorage': { deps: ['backbone'] },
+        'studentPersonal.template': { deps: ['runtime'] },
     }
 });
 

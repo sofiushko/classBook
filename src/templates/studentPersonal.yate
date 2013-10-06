@@ -1,0 +1,55 @@
+module "studentPersonal"
+
+match / {
+    <div class="personal">
+        <h1 class="personal__title">{ .first_name } {.last_name}</h1>
+        
+        <div class = "personal__container">
+            <div class = "personal__container_contacts">
+                <h3 class = "contacts_title">Контакты</h3>
+                <ul class = "contacts_list">
+                    if .link_facebook {
+                        <li class =  "list_item"> 
+                            <a class = "list-item-link link" href = "{ .link_facebook}" title="Facebook" target="_blank">
+                            <div class = "list_item_icon"></div>
+                            "Facebook"
+                            </a>
+                        </li>
+                    }
+                    if .link_vk {
+                        <li class =  "list_item"> 
+                            <a class = "list-item-link link" href = "{ .link_vk }" title="ВКонтакте" target="_blank">
+                            <div class = "list_item_icon"></div>
+                            "ВКонтакте"
+                            </a>
+                        </li>
+                    }
+                    if .link_github {
+                        <li class =  "list_item"> 
+                            <a class = "list-item-link link" href = "{ .link_github }" title="GitHub" target="_blank">
+                            <div class = "list_item_icon"></div>
+                            "GitHub"
+                            </a>
+                        </li>
+                    }
+                    if .link_yaru {
+                        <li class =  "list_item"> 
+                            <a class = "list-item-link link" href = "{.link_yaru}" title="Я.ру" target="_blank">
+                            <div class = "list_item_icon"></div>
+                            "Я.ру"
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
+            <div class = "personal__container_info">
+                if .link_photo !="" {
+                      <img class = "container_info_photo"  src="{ .link_photo }" alt="{ .first_name} {.last_name }"/> 
+                    }
+                if .about != "" {
+                    <div class = "container_info_about">{ .about }</div>
+                }
+            </div>
+        </div>
+    </div>
+}

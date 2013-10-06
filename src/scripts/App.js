@@ -5,7 +5,6 @@ define('App', ['backbone','AppRouter', 'StudentCollection', 'StudentsPageView', 
             this.studentCollection = new StudentCollection()
             this.studentCollection.localStorage = new Backbone.LocalStorage("students")
             this.fetch() 
-            console.log (this.studentCollection)
             this.router = new AppRouter();
         },
 

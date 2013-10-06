@@ -2,9 +2,11 @@ module "student"
 
 match / {
     <div class = "student__container">
-        <div class = "student__photo-container">
-            <img class="student__photo" src="{ .link_photo }" alt="{ .first_name} {.last_name }"/>
-        </div>
+    	if .link_photo != "" {
+	        <div class = "student__photo-container">
+	            <img class="student__photo" src="{ .link_photo }" alt="{ .first_name} {.last_name }"/>
+	        </div>
+    	}
         <div class = "student__name-container">
             <p class="student__name-container_item">{ .first_name }</p>
             <p  class="student__name-container_item">{ .last_name }</p>
