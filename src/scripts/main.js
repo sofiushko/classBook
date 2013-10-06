@@ -14,7 +14,7 @@
         'student.template': '../templates/student.template',
         'info.template': '../templates/info.template',
         'InfoView': 'views/InfoView',
-        'backbone.localstorage': 'vendor/backbone.localstorage',
+        'backbone.localstorage': 'vendor/backbone.localStorage',
     }, 
 
     shim: {
