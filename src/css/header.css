@@ -44,7 +44,7 @@
 
 .header__info:hover,  
 .header__info.active{
-    border-color: rgb(200,52,52);
+    border-color: rgb(220,52,52);
 }
 
 .header__students:hover, 

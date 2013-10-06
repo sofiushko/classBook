@@ -8,6 +8,9 @@ match / {
             if .subtitle {
               <h2 class="info__container_subtitle">{ .subtitle }</h2>
             }
+            if .photo {
+              <img class="info__photo" src="{ .photo }" alt ="ШРИ"/> 
+            }
               for .text {
                 if .susubtitle {
                   <h3 class="info__container_susubtitle">{ .susubtitle }</h3>

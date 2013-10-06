@@ -27,7 +27,9 @@ var yr = yr || require('yate/lib/runtime.js');
 
     var j3 = [ 0, 'subtitle' ];
 
-    var j4 = [ 0, 'susubtitle' ];
+    var j4 = [ 0, 'photo' ];
+
+    var j5 = [ 0, 'susubtitle' ];
 
     // match /
     M.t0 = function t0(m, c0, i0, l0, a0) {
@@ -42,6 +44,9 @@ var yr = yr || require('yate/lib/runtime.js');
             var c1 = items0[ i1 ];
             if (simpleBoolean('subtitle', c1)) {
                 r0 += "<h2 class=\"" + "info__container_subtitle" + "\">" + nodeset2xml( ( selectNametest('subtitle', c1, []) ) ) + "</h2>";
+            }
+            if (simpleBoolean('photo', c1)) {
+                r0 += "<img class=\"" + "info__photo" + "\" src=\"" + nodeset2attrvalue( ( selectNametest('photo', c1, []) ) ) + "\" alt=\"" + "ШРИ" + "\"/>";
             }
             var items1 = selectNametest('text', c1, []);
             for (var i2 = 0, l2 = items1.length; i2 < l2; i2++) {
