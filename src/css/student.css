@@ -1,5 +1,4 @@
 .student {
-    padding: 15px;
     display: inline-block;
 }
 
@@ -12,6 +11,8 @@
     border-width: 1px;
     border-style: solid;
     border-color: rgba(200,200,200,0.3); 
+    padding: 15px;
+    margin: 3px;
 }
 
 
@@ -26,15 +27,12 @@
 
 .student__photo-container {
     overflow: hidden;
-   /* height: auto;*/
-    width: 150px;
+    width: 155px;
     height: 120px;
 }
 
 
 .student__photo {
-    /*width: 150px;*/
-    /*height: auto;*/
     width: 170px;
     border: none;
 }
@@ -42,8 +40,17 @@
 
 .student__name-container {
     font-size: 12px;
-    text-align: center;
-    padding: 5px 0;
+    padding-top: 20px;
     background: #ffffff;
     color: rgba(100,100,100,1);
+    line-height: 1.4em;
+}
+
+.student__name-container_name {
+    font-size: 14px;
+}
+
+.student__name-container_city {
+    color: rgb(150, 150, 150);
+    font-size: 11px;
 }

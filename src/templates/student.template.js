@@ -27,6 +27,8 @@ var yr = yr || require('yate/lib/runtime.js');
 
     var j3 = [ 0, 'last_name' ];
 
+    var j4 = [ 0, 'city' ];
+
     // match /
     M.t0 = function t0(m, c0, i0, l0, a0) {
         var r0 = '';
@@ -39,8 +41,10 @@ var yr = yr || require('yate/lib/runtime.js');
             r0 += "</div>";
         }
         r0 += "<div class=\"" + "student__name-container" + "\">";
-        r0 += "<p class=\"" + "student__name-container_item" + "\">" + nodeset2xml( ( selectNametest('first_name', c0, []) ) ) + "</p>";
-        r0 += "<p class=\"" + "student__name-container_item" + "\">" + nodeset2xml( ( selectNametest('last_name', c0, []) ) ) + "</p>";
+        r0 += "<p class=\"" + "student__name-container_name" + "\">" + nodeset2xml( ( selectNametest('first_name', c0, []) ) ) + " " + nodeset2xml( ( selectNametest('last_name', c0, []) ) ) + "</p>";
+        if (simpleBoolean('city', c0)) {
+            r0 += "<p class=\"" + "student__name-container_city" + "\">" + nodeset2xml( ( selectNametest('city', c0, []) ) ) + "</p>";
+        }
         r0 += "</div>";
         r0 += "</div>";
 

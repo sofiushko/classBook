@@ -8,8 +8,10 @@ match / {
 	        </div>
     	}
         <div class = "student__name-container">
-            <p class="student__name-container_item">{ .first_name }</p>
-            <p  class="student__name-container_item">{ .last_name }</p>
+            <p class="student__name-container_name">{ .first_name } { .last_name }</p>
+            if .city {
+                <p  class="student__name-container_city">{ .city }</p>
+            }
         </div>
     </div>
 }
