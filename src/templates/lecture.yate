@@ -1,0 +1,10 @@
+module "lecture"
+
+match / {
+    <div class = "lecture__lector"></div>
+
+    <h2 class = "lecture__title">{ .name }</h2>
+    if .lecture_date {
+        <p class="lecture_date">{ .lecture_date }</p>
+    }
+}
