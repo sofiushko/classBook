@@ -4,10 +4,10 @@ define ('StudentModel', ['backbone'], function(Backbone){
         },
 
         defaults: {
-            first_name: "Введите имя",
-            last_name: "Введите фамилию",
+            first_name: "Имя",
+            last_name: "Фамилия",
             link_photo: "img/defaultPhoto.jpg",
-            city: "Введите город"
+            city: "Город"
         }
 
     });

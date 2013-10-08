@@ -1,4 +1,4 @@
-define ('LecturesPageView', ['backbone', 'jquery', 'LectureView', 'lecturesPage.template'], function(Backbone, $, LectureView){
+define ('LecturesPageView', ['backbone', 'jquery', 'LectureView', 'LectorMiniView', 'lecturesPage.template'], function(Backbone, $, LectureView, LectorMiniView){
     return Backbone.View.extend ({
         el: $(".classBook"),
 
@@ -14,12 +14,13 @@ define ('LecturesPageView', ['backbone', 'jquery', 'LectureView', 'lecturesPage.
             return this;
         },
 
+/*------Рендерим одну лекцию-----*/
         renderLecture: function(item) {
+            item.set('lector', this.options.lectors.get(item.get("lector_id")))
             var lectureView = new LectureView({
                 model:item
             });
             this.$el.find('.lecturesPage__lectures').append(lectureView.render().el);
-        }
-
+          },
     });
 });

@@ -23,8 +23,10 @@ define('AppRouter', ['backbone', 'StudentsPageView', 'InfoView', 'StudentPersona
         },
 
         renderLectures: function() {
+            // console.log('this.app.lectorsC ', this.app.lectorsC)
             var lecturesPageView = new LecturesPageView({ 
-                collection: this.app.lecturesC
+                collection: this.app.lecturesC,
+                lectors: this.app.lectorsC
             }).render(); 
         },
 

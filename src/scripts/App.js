@@ -1,5 +1,5 @@
-define('App', ['backbone', 'StudentCollection', 'data', 'LecturesCollection'], 
-    function (Backbone, StudentCollection,  data, LecturesCollection) {
+define('App', ['backbone', 'StudentCollection', 'data', 'LecturesCollection', 'LectorsCollection'], 
+    function (Backbone, StudentCollection,  data, LecturesCollection, LectorsCollection) {
     return {
         initialize: function() {
             this.studentsC = new (StudentCollection.extend({
@@ -8,9 +8,13 @@ define('App', ['backbone', 'StudentCollection', 'data', 'LecturesCollection'],
             this.lecturesC = new (LecturesCollection.extend({
                 localStorage: new Backbone.LocalStorage("lectures")
             }))();
+            this.lectorsC = new (LectorsCollection.extend({
+                localStorage: new Backbone.LocalStorage("lectors")
+            }))();
 
             this.fetch(this.studentsC, data.students);
             this.fetch(this.lecturesC, data.lecturesData.lectures); 
+            this.fetch(this.lectorsC, data.lecturesData.lectors); 
 
         },
 

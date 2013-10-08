@@ -13,6 +13,7 @@
 /*-------------models------------------*/
         'StudentModel': 'models/StudentModel',
         'LectureModel': 'models/LectureModel',
+        'LectorModel': 'models/LectorModel',
 
 /*-------------views------------------*/
         'StudentView': 'views/StudentView',
@@ -21,17 +22,20 @@
         'InfoView': 'views/InfoView',
         'LectureView': 'views/LectureView', 
         'LecturesPageView': 'views/LecturesPageView',
+        'LectorMiniView': 'views/LectorMiniView',
 
 /*-------------collections------------------*/
         'StudentCollection': 'collections/StudentCollection',       
         'LecturesCollection': 'collections/LecturesCollection',
+        'LectorsCollection': 'collections/LectorsCollection',
        
 /*-------------yate js templates------------------*/
         'info.template': '../templates/info.template',
         'student.template': '../templates/student.template',
         'lecturesPage.template': '../templates/lecturesPage.template',
         'lecture.template': '../templates/lecture.template',
-        'studentPersonal.template': '../templates/studentPersonal.template'
+        'studentPersonal.template': '../templates/studentPersonal.template',
+        'lector.template': '../templates/lector.template'
     }, 
 
     shim: {
@@ -45,7 +49,8 @@
         'student.template': { deps: ['runtime'] },
         'lecturesPage.template': { deps: ['runtime'] },
         'lecture.template': { deps: ['runtime'] },
-        'studentPersonal.template': { deps: ['runtime'] }
+        'studentPersonal.template': { deps: ['runtime'] },
+        'lector.template': { deps: ['runtime'] }
     }
 });
 

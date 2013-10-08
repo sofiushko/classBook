@@ -1,0 +1,14 @@
+﻿module "lector"
+
+match / {
+    <div class = "lector__container">
+    	if .photo_url != "" {
+	        <div class = "lector__photo-container">
+	            <img class="lector__photo" src="{ .photo_url }" alt="{ .name}"/>
+	        </div>
+    	}
+        <div class = "lector_name-container">
+            <p class="lector_name-container_name">{ .name }</p>
+        </div>
+    </div>
+}
