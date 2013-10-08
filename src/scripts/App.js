@@ -1,23 +1,28 @@
-define('App', ['backbone','AppRouter', 'StudentCollection', 'StudentsPageView', 'data', 'LecturesCollection'], 
-    function (Backbone, AppRouter,  StudentCollection, StudentsPageView, data, LecturesCollection) {
+define('App', ['backbone', 'StudentCollection', 'data', 'LecturesCollection'], 
+    function (Backbone, StudentCollection,  data, LecturesCollection) {
     return {
         initialize: function() {
-            this.studentCollection = new StudentCollection()
-            this.lecturesCollection = new LecturesCollection(data.lecturesData.lectures)
+            this.studentsC = new (StudentCollection.extend({
+                localStorage: new Backbone.LocalStorage("students")
+            }))();
+            this.lecturesC = new (LecturesCollection.extend({
+                localStorage: new Backbone.LocalStorage("lectures")
+            }))();
 
-            this.fetch(this.studentCollection, data.students) 
-            this.router = new AppRouter();
+            this.fetch(this.studentsC, data.students);
+            this.fetch(this.lecturesC, data.lecturesData.lectures); 
+
         },
 
         fetch: function (collection, data) {
             collection.fetch();
             if (collection.isEmpty()) {
-                collection.add(data.students);
+                collection.add(data);
                 collection.each(function(item) {
-                    item.save();}, this)
+                    item.save();}, this);
             } else {
                 console.log('Loaded from localStorage');
             }
-        },
-    }
+        }
+    };
 });

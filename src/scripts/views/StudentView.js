@@ -17,7 +17,7 @@ define('StudentView', ['backbone', 'jquery', 'student.template'], function (Back
         },
         
         openPeronalData: function() {
-            App.router.navigate("//students/" + this.model.get("id"), {trigger: true});
+            Backbone.history.navigate("//students/" + this.model.get("id"), {trigger: true});
         }
 
     });

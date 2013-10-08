@@ -5,7 +5,5 @@
         url: function() {
             return '/#/lectures';
         },
-
-        localStorage: new Backbone.LocalStorage("lectures")
     });
 });

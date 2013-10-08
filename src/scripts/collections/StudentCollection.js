@@ -5,7 +5,5 @@ define ('StudentCollection', ['backbone', 'StudentModel', 'backbone.localstorage
         url: function() {
             return '/#/srudents';
         },
-
-        localStorage: new Backbone.LocalStorage("students")
     });
 });

@@ -50,15 +50,10 @@
 });
 
 
-/*----------App initialization---------------*/
+/*----------initialization---------------*/
 
-var App = App || {};
-
-require(['jquery', 'underscore', 'App' ],function( $, _, app) {
+require(['jquery', 'AppRouter' ],function( $, AppRouter) {
     $(function(){
-        App = _.extend(app, App);
-        App.initialize();
-      //  window.App = app;
-      //  window.App.initialize();
+        var appRouter = new AppRouter();
     });
 });

@@ -8,12 +8,9 @@ define ('LecturesPageView', ['backbone', 'jquery', 'LectureView', 'lecturesPage.
         render: function() {
             $('.header__menu_item').removeClass('active');
             $('a[href="'+window.location.hash+'"]').parent().addClass('active');
-            console.log('this', this)
-            var compiled_template = yr.run ('lecturesPage', this.collection.toJSON());
+            var compiled_template = yr.run ('lecturesPage');
             this.$el.html(compiled_template);
             this.collection.each(this.renderLecture, this); 
-          //  this.collection.each(this.renderLector, this); 
-
             return this;
         },
 
