@@ -1,7 +1,7 @@
-define('LectorMiniView', ['backbone', 'jquery', 'lectorMini.template'], function (Backbone, $) {
+﻿define('LectorMidlView', ['backbone', 'jquery', 'lectorMidl.template'], function (Backbone, $) {
     return Backbone.View.extend ({
         tagName: "div",
-        className: "lectorMini",
+        className: "lectorMidl",
         
         initialize: function(){
         },
@@ -10,7 +10,7 @@ define('LectorMiniView', ['backbone', 'jquery', 'lectorMini.template'], function
         },
 
         render: function() {
-            var compiled_template = yr.run ('lectorMini', this.model.toJSON());
+            var compiled_template = yr.run ('lectorMidl', this.model.toJSON());
             this.$el.html(compiled_template);
             return this;
         }

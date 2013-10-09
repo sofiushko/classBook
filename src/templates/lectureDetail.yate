@@ -1,0 +1,25 @@
+﻿module "lectureDetail"
+
+match / {
+    <div class="lectureDetail"> 
+        <h1 class="lectureDetail__title big_title">{ .name }</h1>
+        <div class="lectureDetail_container"> 
+            <div class = "lectureDetail__container_info">
+                <div class = "lectureDetail_lectorMidl-container"></div>
+                     
+                 if .about != "" {
+                    <div class = "lectureDetail_about"><p>{ .about }</p></div>
+                    }
+            </div>
+            <div class='lectureDetail_links'>
+                if .video_url {
+                    <a class = "lectureDetail_vlink link" href = "{ .video_url}" target="_blank">Посмотреть видео</a>
+                }
+            </div>
+            if .slides_url {
+                <iframe class="lectureDetail_slideshare" src="{ .slides_url }"> </iframe> 
+            }
+        </div>
+       
+    </div>
+}

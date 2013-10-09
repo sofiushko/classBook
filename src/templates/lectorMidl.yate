@@ -1,0 +1,14 @@
+module "lectorMidl"
+
+match / {
+    <div class = "lectorMidl__container">
+    	if .photo_url != "" {
+	        <div class = "lectorMidl__photo-container">
+	            <img class="lectorMidl__photo" src="{ .photo_url }" alt="{ .name}"/>
+	        </div>
+    	}
+        <div class = "lectorMidl_name-container">
+            <p class="lectorMidl__name">{ .name }</p>
+        </div>
+    </div>
+}
