@@ -30,15 +30,13 @@ var yr = yr || require('yate/lib/runtime.js');
         var r0 = '';
 
         r0 += closeAttrs(a0);
-        r0 += "<div class=\"" + "lectorMidl__container" + "\">";
         if (!(cmpSN("", selectNametest('photo_url', c0, [])))) {
             r0 += "<div class=\"" + "lectorMidl__photo-container" + "\">";
             r0 += "<img class=\"" + "lectorMidl__photo" + "\" src=\"" + nodeset2attrvalue( ( selectNametest('photo_url', c0, []) ) ) + "\" alt=\"" + nodeset2attrvalue( ( selectNametest('name', c0, []) ) ) + "\"/>";
             r0 += "</div>";
         }
         r0 += "<div class=\"" + "lectorMidl_name-container" + "\">";
-        r0 += "<p class=\"" + "lectorMidl_name-container_name" + "\">" + nodeset2xml( ( selectNametest('name', c0, []) ) ) + "</p>";
-        r0 += "</div>";
+        r0 += "<p class=\"" + "lectorMidl__name" + "\">" + nodeset2xml( ( selectNametest('name', c0, []) ) ) + "</p>";
         r0 += "</div>";
 
         return r0;

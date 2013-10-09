@@ -28,9 +28,7 @@ var yr = yr || require('yate/lib/runtime.js');
         var r0 = '';
 
         r0 += closeAttrs(a0);
-        r0 += "<div class=\"" + "lectorMini__container" + "\">";
         r0 += "<p class=\"" + "lectorMini_name" + "\">" + nodeset2xml( ( selectNametest('name', c0, []) ) ) + "</p>";
-        r0 += "</div>";
 
         return r0;
     };

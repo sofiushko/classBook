@@ -1,7 +1,5 @@
 ﻿module "lectorMini"
 
 match / {
-    <div class = "lectorMini__container">
-        <p class="lectorMini_name">{ .name }</p>
-    </div>
+    <p class="lectorMini_name">{ .name }</p>
 }
