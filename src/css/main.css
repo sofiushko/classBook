@@ -24,5 +24,9 @@ body {
 }
 
 .classBook {
-    padding-bottom: 40px;   
+    padding-bottom: 30px;   
+}
+
+.link {
+	color: rgb(130, 130, 130);
 }

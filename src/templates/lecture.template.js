@@ -21,9 +21,11 @@ var yr = yr || require('yate/lib/runtime.js');
 
     var j0 = [ ];
 
-    var j1 = [ 0, 'name' ];
+    var j1 = [ 0, 'id' ];
 
-    var j2 = [ 0, 'lecture_date' ];
+    var j2 = [ 0, 'name' ];
+
+    var j3 = [ 0, 'lecture_date' ];
 
     // match /
     M.t0 = function t0(m, c0, i0, l0, a0) {
@@ -31,7 +33,7 @@ var yr = yr || require('yate/lib/runtime.js');
 
         r0 += closeAttrs(a0);
         r0 += "<div class=\"" + "lecture__lector" + "\"></div>";
-        r0 += "<h2 class=\"" + "lecture__title" + "\">" + nodeset2xml( ( selectNametest('name', c0, []) ) ) + "</h2>";
+        r0 += "<a class=\"" + "link lecture__link" + "\" href=\"" + "#/lecture/" + nodeset2attrvalue( ( selectNametest('id', c0, []) ) ) + "\"><h2 class=\"" + "lecture__title" + "\">" + nodeset2xml( ( selectNametest('name', c0, []) ) ) + "</h2></a>";
         if (simpleBoolean('lecture_date', c0)) {
             r0 += "<p class=\"" + "lecture_date" + "\">" + nodeset2xml( ( selectNametest('lecture_date', c0, []) ) ) + "</p>";
         }

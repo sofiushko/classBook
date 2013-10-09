@@ -5,9 +5,9 @@
 
 .student__container {
     background: #ffffff;
-    box-shadow: 0 0px 5px rgba(0,0,0,0.4);
-    -webkit-box-shadow: 0 0px 5px rgba(0,0,0,0.4);
-    -moz-box-shadow: 0 0px 5px rgba(0,0,0,0.4);
+    box-shadow: 0 0px 5px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 0px 5px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 0px 5px rgba(0,0,0,0.1);
     border-width: 1px;
     border-style: solid;
     border-color: rgba(200,200,200,0.3); 
@@ -53,4 +53,8 @@
 .student__name-container_city {
     color: rgb(150, 150, 150);
     font-size: 11px;
+}
+
+.student__link {
+    text-decoration: none;
 }

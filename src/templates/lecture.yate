@@ -3,7 +3,7 @@ module "lecture"
 match / {
     <div class = "lecture__lector"></div>
 
-    <h2 class = "lecture__title">{ .name }</h2>
+    <a class = "link lecture__link" href="#/lecture/{ .id }"><h2 class = "lecture__title">{ .name }</h2></a>
     if .lecture_date {
         <p class="lecture_date">{ .lecture_date }</p>
     }

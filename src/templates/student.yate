@@ -1,7 +1,7 @@
 module "student"
 
 match / {
-    <div class = "student__container">
+    <a class = "link student__link" href="#/students/{ .id }"><div class = "student__container">
     	if .link_photo != "" {
 	        <div class = "student__photo-container">
 	            <img class="student__photo" src="{ .link_photo }" alt="{ .first_name} {.last_name }"/>
@@ -13,5 +13,5 @@ match / {
                 <p  class="student__name-container_city">{ .city }</p>
             }
         </div>
-    </div>
+    </div></a>
 }

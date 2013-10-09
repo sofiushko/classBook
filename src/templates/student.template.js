@@ -21,20 +21,22 @@ var yr = yr || require('yate/lib/runtime.js');
 
     var j0 = [ ];
 
-    var j1 = [ 0, 'link_photo' ];
+    var j1 = [ 0, 'id' ];
 
-    var j2 = [ 0, 'first_name' ];
+    var j2 = [ 0, 'link_photo' ];
 
-    var j3 = [ 0, 'last_name' ];
+    var j3 = [ 0, 'first_name' ];
 
-    var j4 = [ 0, 'city' ];
+    var j4 = [ 0, 'last_name' ];
+
+    var j5 = [ 0, 'city' ];
 
     // match /
     M.t0 = function t0(m, c0, i0, l0, a0) {
         var r0 = '';
 
         r0 += closeAttrs(a0);
-        r0 += "<div class=\"" + "student__container" + "\">";
+        r0 += "<a class=\"" + "link student__link" + "\" href=\"" + "#/students/" + nodeset2attrvalue( ( selectNametest('id', c0, []) ) ) + "\"><div class=\"" + "student__container" + "\">";
         if (!(cmpSN("", selectNametest('link_photo', c0, [])))) {
             r0 += "<div class=\"" + "student__photo-container" + "\">";
             r0 += "<img class=\"" + "student__photo" + "\" src=\"" + nodeset2attrvalue( ( selectNametest('link_photo', c0, []) ) ) + "\" alt=\"" + nodeset2attrvalue( ( selectNametest('first_name', c0, []) ) ) + " " + nodeset2attrvalue( ( selectNametest('last_name', c0, []) ) ) + "\"/>";
@@ -46,7 +48,7 @@ var yr = yr || require('yate/lib/runtime.js');
             r0 += "<p class=\"" + "student__name-container_city" + "\">" + nodeset2xml( ( selectNametest('city', c0, []) ) ) + "</p>";
         }
         r0 += "</div>";
-        r0 += "</div>";
+        r0 += "</div></a>";
 
         return r0;
     };
