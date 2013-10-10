@@ -23,11 +23,11 @@ var yr = yr || require('yate/lib/runtime.js');
 
     var j1 = [ 0, 'name' ];
 
-    var j2 = [ 0, 'lector', 0, 'attributes', 0, 'photo_url' ];
+    var j2 = [ 0, 'lector', 0, 'attributes', 0, 'id' ];
 
-    var j3 = [ 0, 'lector', 0, 'attributes', 0, 'name' ];
+    var j3 = [ 0, 'lector', 0, 'attributes', 0, 'photo_url' ];
 
-    var j4 = [ 0, 'lector', 0, 'attributes', 0, 'id' ];
+    var j4 = [ 0, 'lector', 0, 'attributes', 0, 'name' ];
 
     var j5 = [ 0, 'about' ];
 
@@ -41,26 +41,29 @@ var yr = yr || require('yate/lib/runtime.js');
 
         r0 += closeAttrs(a0);
         r0 += "<div class=\"" + "lectureDetail" + "\">";
-        r0 += "<h1 class=\"" + "lectureDetail__title big_title" + "\">" + nodeset2xml( ( selectNametest('name', c0, []) ) ) + "</h1>";
         r0 += "<div class=\"" + "lectureDetail_container" + "\">";
+        r0 += "<h1 class=\"" + "lectureDetail__title big_title" + "\">" + nodeset2xml( ( selectNametest('name', c0, []) ) ) + "</h1>";
         r0 += "<div class=\"" + "lectureDetail__container_info" + "\">";
-        r0 += "<div class=\"" + "lectureDetail_lector-container" + "\">";
-        if (!(cmpSN("", m.s(j2, c0)))) {
+        r0 += "<div class=\"" + "link lectureDetail_lector-container" + "\">";
+        r0 += "<a href=\"" + "#/lectors/" + nodeset2attrvalue( ( m.s(j2, c0) ) ) + "\" class=\"" + "link lectureDetail_llink" + "\">";
+        if (!(cmpSN("", m.s(j3, c0)))) {
             r0 += "<div class=\"" + "lectureDetail__photo-container" + "\">";
-            r0 += "<img class=\"" + "lectureDetail__photo" + "\" src=\"" + nodeset2attrvalue( ( m.s(j2, c0) ) ) + "\" alt=\"" + nodeset2attrvalue( ( m.s(j3, c0) ) ) + "\"/>";
+            r0 += "<img class=\"" + "lectureDetail__photo" + "\" src=\"" + nodeset2attrvalue( ( m.s(j3, c0) ) ) + "\" alt=\"" + nodeset2attrvalue( ( m.s(j4, c0) ) ) + "\"/>";
             r0 += "</div>";
         }
-        r0 += "<a href=\"" + "#/lectors/" + nodeset2attrvalue( ( m.s(j4, c0) ) ) + "\" class=\"" + "lectureDetail__lector-name-link" + "\">";
-        r0 += "<p class=\"" + "lectureDetail__lector-name" + "\">" + nodeset2xml( ( m.s(j3, c0) ) ) + "</p>";
+        r0 += "<p class=\"" + "lectureDetail__lector-name" + "\">" + nodeset2xml( ( m.s(j4, c0) ) ) + "</p>";
         r0 += "</a>";
         r0 += "</div>";
         if (!(cmpSN("", selectNametest('about', c0, [])))) {
             r0 += "<div class=\"" + "lectureDetail_about" + "\"><p>" + nodeset2xml( ( selectNametest('about', c0, []) ) ) + "</p></div>";
         }
-        r0 += "</div>";
         r0 += "<div class=\"" + "lectureDetail_links" + "\">";
         if (simpleBoolean('video_url', c0)) {
             r0 += "<a class=\"" + "lectureDetail_vlink link" + "\" href=\"" + nodeset2attrvalue( ( selectNametest('video_url', c0, []) ) ) + "\" target=\"" + "_blank" + "\">" + "Посмотреть видео" + "</a>";
+        }
+        r0 += "</div>";
+        if (simpleBoolean('slides_url', c0)) {
+            r0 += "<a class=\"" + "lectureDetail_vlink link" + "\" href=\"" + nodeset2attrvalue( ( selectNametest('slides_url', c0, []) ) ) + "\" target=\"" + "_blank" + "\">" + "Посмотреть презентацию" + "</a>";
         }
         r0 += "</div>";
         if (simpleBoolean('slides_url', c0)) {

@@ -5,6 +5,8 @@
 @import url("studentPage.css");
 @import url("info.css");
 @import url("studentPersonal.css");
+@import url("lecturesPage.css");
+@import url("lectureDetail.css");
 
 html {
     height: 100%;
@@ -29,4 +31,15 @@ body {
 
 .link {
 	color: rgb(130, 130, 130);
+}
+
+.big_title {
+    font-size: 24px;
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.navigation {
+    height: 40px;
 }

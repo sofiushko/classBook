@@ -1,4 +1,1 @@
-<div class="studentPage">
-	<h1 class="studentPage__title">Студенты</h1>
-	<div class="studentPage__students"></div>
-</div>
+<div class="studentPage__students"></div>

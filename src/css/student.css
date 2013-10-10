@@ -5,9 +5,9 @@
 
 .student__container {
     background: #ffffff;
-    box-shadow: 0 0px 5px rgba(0,0,0,0.1);
-    -webkit-box-shadow: 0 0px 5px rgba(0,0,0,0.1);
-    -moz-box-shadow: 0 0px 5px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
     border-width: 1px;
     border-style: solid;
     border-color: rgba(200,200,200,0.3); 
@@ -17,9 +17,9 @@
 
 
 .student__container:hover {
-    box-shadow: 0 0px 10px rgba(255,204,0,0.5);
-    -webkit-box-shadow: 0 0px 10px rgba(255,204,0,0.5);
-    -moz-box-shadow: 0 0px 10px rgba(255,204,0,,0.5);
+    -webkit-box-shadow: 0 0 10px rgba(255,204,0,0.5);
+    -moz-box-shadow: 0 0 10px rgba(255,204,0,0.5);
+    box-shadow: 0 0 10px rgba(255,204,0,0.5);
     border-color: rgba(255,224,0,1); 
     cursor: pointer;
 }

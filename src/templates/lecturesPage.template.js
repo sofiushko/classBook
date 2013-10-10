@@ -27,7 +27,6 @@ var yr = yr || require('yate/lib/runtime.js');
 
         r0 += closeAttrs(a0);
         r0 += "<div class=\"" + "lecturesPage" + "\">";
-        r0 += "<h1 class=\"" + "lecturesPage__title big_title" + "\">" + "Лекции" + "</h1>";
         r0 += "<div class=\"" + "lecturesPage__lectures" + "\"></div>";
         r0 += "</div>";
 

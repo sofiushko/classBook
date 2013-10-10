@@ -2,9 +2,8 @@ module "studentPersonal"
 
 match / {
     <div class="personal">
-        <h1 class="personal__title">{ .first_name } {.last_name}</h1>
-        
         <div class = "personal__container">
+        <h1 class="personal__title">{ .first_name } {.last_name}</h1>
             <div class = "personal__container_contacts">
                 <h3 class = "contacts_title">Контакты</h3>
                 <ul class = "contacts_list">

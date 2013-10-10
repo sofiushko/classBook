@@ -38,12 +38,11 @@ var yr = yr || require('yate/lib/runtime.js');
         r0 += closeAttrs(a0);
         r0 += "<div class=\"" + "info" + "\">";
         r0 += "<h1 class=\"" + "info__title" + "\">" + nodeset2xml( ( selectNametest('title', c0, []) ) ) + "</h1>";
-        r0 += "<div class=\"" + "info__container" + "\">";
         var items0 = selectNametest('text', c0, []);
         for (var i1 = 0, l1 = items0.length; i1 < l1; i1++) {
             var c1 = items0[ i1 ];
             if (simpleBoolean('subtitle', c1)) {
-                r0 += "<h2 class=\"" + "info__container_subtitle" + "\">" + nodeset2xml( ( selectNametest('subtitle', c1, []) ) ) + "</h2>";
+                r0 += "<h2 class=\"" + "info__subtitle" + "\">" + nodeset2xml( ( selectNametest('subtitle', c1, []) ) ) + "</h2>";
             }
             if (simpleBoolean('photo', c1)) {
                 r0 += "<img class=\"" + "info__photo" + "\" src=\"" + nodeset2attrvalue( ( selectNametest('photo', c1, []) ) ) + "\" alt=\"" + "ШРИ" + "\"/>";
@@ -52,12 +51,11 @@ var yr = yr || require('yate/lib/runtime.js');
             for (var i2 = 0, l2 = items1.length; i2 < l2; i2++) {
                 var c2 = items1[ i2 ];
                 if (simpleBoolean('susubtitle', c2)) {
-                    r0 += "<h3 class=\"" + "info__container_susubtitle" + "\">" + nodeset2xml( ( selectNametest('susubtitle', c2, []) ) ) + "</h3>";
+                    r0 += "<h3 class=\"" + "info__susubtitle" + "\">" + nodeset2xml( ( selectNametest('susubtitle', c2, []) ) ) + "</h3>";
                 }
-                r0 += "<p class=\"" + "info__container_text" + "\">" + ( simpleScalar('text', c2) ) + "</p>";
+                r0 += "<p class=\"" + "info__text" + "\">" + ( simpleScalar('text', c2) ) + "</p>";
             }
         }
-        r0 += "</div>";
         r0 += "</div>";
 
         return r0;

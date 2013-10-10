@@ -43,8 +43,8 @@ var yr = yr || require('yate/lib/runtime.js');
 
         r0 += closeAttrs(a0);
         r0 += "<div class=\"" + "personal" + "\">";
-        r0 += "<h1 class=\"" + "personal__title" + "\">" + nodeset2xml( ( selectNametest('first_name', c0, []) ) ) + " " + nodeset2xml( ( selectNametest('last_name', c0, []) ) ) + "</h1>";
         r0 += "<div class=\"" + "personal__container" + "\">";
+        r0 += "<h1 class=\"" + "personal__title" + "\">" + nodeset2xml( ( selectNametest('first_name', c0, []) ) ) + " " + nodeset2xml( ( selectNametest('last_name', c0, []) ) ) + "</h1>";
         r0 += "<div class=\"" + "personal__container_contacts" + "\">";
         r0 += "<h3 class=\"" + "contacts_title" + "\">" + "Контакты" + "</h3>";
         r0 += "<ul class=\"" + "contacts_list" + "\">";

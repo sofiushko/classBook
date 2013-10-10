@@ -1,7 +1,3 @@
-.personal {
-    margin-top: 10px;
-}
-
 .personal__title {
     font-size: 24px;
     margin: 15px;
@@ -9,7 +5,7 @@
 
 
 .container_info_about {
-    margin: 0 0 0 330px;
+    margin: 0 0 0 280px;
     /*position: relative;*/
     line-height: 1.4em;
     font-size: 14px;
@@ -18,30 +14,31 @@
 
 .personal__container {
     background: #ffffff;
-    margin-left: 5%;
-    /*margin-right: 5%;*/
-    margin-top: 10px;
     padding: 15px 20px;
-    box-shadow: 0 0px 5px rgba(0,0,0,0.2);
-    -webkit-box-shadow: 0 0px 5px rgba(0,0,0,0.2);
-    -moz-box-shadow: 0 0px 5px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
     display: table;
-    width: 85%;
+    /*width: 85%;*/
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 
 .personal__container_contacts{
     float: right;
     /*position: relative;*/
-    width: 100px;
-    border: 1px solid rgb(255,204,0);
+    /*width: 80px;*/
+    border-left: 3px solid rgb(255,204,0);
     margin-left: 35px;
-    padding: 25px 30px 15px 30px;
+    padding: 5px 10px 15px 15px;
     z-index: 10;
 }
 
 .container_info_photo {
-    width: 300px;
+    width: 250px;
     height: auto;
     /*vertical-align: middle;*/
     /*border: 0;*/
@@ -50,6 +47,8 @@
 .photo_container {
     float: left;
     margin: 0 30px 0 0;
+    max-height: 300px;
+    overflow: hidden;
 }
 
 .icon {
@@ -60,19 +59,19 @@
 }
 
 .icon_ya {
-    background:url(../img/ya-icon.ico);
+    background:url(../img/ya.png);
 }
 
 .icon_facebook {
-    background:url(../img/facebook.png);
+    background:url(../img/fb.png);
 }
 
 .icon_vk {
-    background:url(../img/icon-vk-16.png);
+    background:url(../img/vk.png);
 }
 
 .icon_github {
-    background:url(../img/github_2.png);
+    background:url(../img/gh.png);
 }
 
 .list_item {

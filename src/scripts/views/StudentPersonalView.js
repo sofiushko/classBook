@@ -1,4 +1,4 @@
-define ('StudentPersonalView', ['backbone', 'jquery', 'studentPersonal.template'], function(Backbone, $, personal_templ){
+define ('StudentPersonalView', ['backbone', 'jquery', 'studentPersonal.template'], function(Backbone, $){
     return Backbone.View.extend ({
         el: $(".classBook"),
 

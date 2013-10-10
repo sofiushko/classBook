@@ -2,7 +2,6 @@ module "lecturesPage"
 
 match / {
     <div class="lecturesPage">
-        <h1 class="lecturesPage__title big_title">Лекции</h1>
         <div class="lecturesPage__lectures"></div>
     </div>
 }
