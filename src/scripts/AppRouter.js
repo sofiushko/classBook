@@ -1,5 +1,5 @@
-define('AppRouter', ['backbone', 'StudentsPageView', 'InfoView', 'StudentPersonalView', 'LecturesPageView', 'App', 'LectureDetailView'], 
-    function(Backbone, StudentsPageView, InfoView, StudentPersonalView, LecturesPageView, App, LectureDetailView) {
+define('AppRouter', ['backbone', 'StudentsPageView', 'InfoView', 'StudentPersonalView', 'LecturesPageView', 'App', 'LectureDetailView', 'LectorDetailView'], 
+    function(Backbone, StudentsPageView, InfoView, StudentPersonalView, LecturesPageView, App, LectureDetailView, LectorDetailView) {
     return Backbone.Router.extend({
  
         routes: {
@@ -7,6 +7,7 @@ define('AppRouter', ['backbone', 'StudentsPageView', 'InfoView', 'StudentPersona
             'lectures': 'renderLectures',
             'students/:student' : 'renderPersonalData',
             'lectures/:lecture' : 'renderLectureDetail',
+            'lectors/:lector' : 'renderLectorDetail',
             '*actions': 'defaultAction'
             
         },
@@ -42,10 +43,16 @@ define('AppRouter', ['backbone', 'StudentsPageView', 'InfoView', 'StudentPersona
         },
 
         renderLectureDetail: function(lecture) {
-            var lectorModel = this.app.lecturesC.get(lecture);
-            lectorModel.set('lector', this.app.lectorsC.get(lectorModel.get('lector_id')));
+            var lectureModel = this.app.lecturesC.get(lecture);
+            lectureModel.set('lector', this.app.lectorsC.get(lectureModel.get('lector_id')));
             var lectureDetaleView = new LectureDetailView({
-                model: lectorModel
+                model: lectureModel
+            }).render();
+        },
+
+        renderLectorDetail: function(lector) {
+            var lectorDetaleView = new LectorDetailView({
+                model: this.app.lectorsC.get(lector)
             }).render();
         }
        
