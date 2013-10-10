@@ -42,10 +42,8 @@ define('AppRouter', ['backbone', 'StudentsPageView', 'InfoView', 'StudentPersona
         },
 
         renderLectureDetail: function(lecture) {
-           
             var lectorModel = this.app.lecturesC.get(lecture);
             lectorModel.set('lector', this.app.lectorsC.get(lectorModel.get('lector_id')));
-             console.log('in', lectorModel)
             var lectureDetaleView = new LectureDetailView({
                 model: lectorModel
             }).render();

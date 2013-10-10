@@ -1,4 +1,4 @@
-define ('LecturesPageView', ['backbone', 'jquery', 'LectureView', 'LectorMiniView', 'lecturesPage.template'], function(Backbone, $, LectureView, LectorMiniView){
+define ('LecturesPageView', ['backbone', 'jquery', 'LectureView', 'lecturesPage.template'], function(Backbone, $, LectureView){
     return Backbone.View.extend ({
         el: $(".classBook"),
 

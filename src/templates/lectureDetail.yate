@@ -5,7 +5,16 @@ match / {
         <h1 class="lectureDetail__title big_title">{ .name }</h1>
         <div class="lectureDetail_container"> 
             <div class = "lectureDetail__container_info">
-                <div class = "lectureDetail_lectorMidl-container"></div>
+                <div class = "lectureDetail_lector-container">
+                    if .lector.attributes.photo_url != "" {
+                        <div class = "lectureDetail__photo-container">
+                            <img class="lectureDetail__photo" src="{ .lector.attributes.photo_url }" alt="{ .lector.attributes.name}"/>
+                        </div>
+                    }
+                    <a href = "#/lectors/{.lector.attributes.id}" class = "lectureDetail__lector-name-link">
+                        <p class="lectureDetail__lector-name">{ .lector.attributes.name }</p>
+                    </a>
+                </div>
                      
                  if .about != "" {
                     <div class = "lectureDetail_about"><p>{ .about }</p></div>

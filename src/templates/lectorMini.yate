@@ -1,5 +1,0 @@
-﻿module "lectorMini"
-
-match / {
-    <p class="lectorMini_name">{ .name }</p>
-}

@@ -23,11 +23,17 @@ var yr = yr || require('yate/lib/runtime.js');
 
     var j1 = [ 0, 'name' ];
 
-    var j2 = [ 0, 'about' ];
+    var j2 = [ 0, 'lector', 0, 'attributes', 0, 'photo_url' ];
 
-    var j3 = [ 0, 'video_url' ];
+    var j3 = [ 0, 'lector', 0, 'attributes', 0, 'name' ];
 
-    var j4 = [ 0, 'slides_url' ];
+    var j4 = [ 0, 'lector', 0, 'attributes', 0, 'id' ];
+
+    var j5 = [ 0, 'about' ];
+
+    var j6 = [ 0, 'video_url' ];
+
+    var j7 = [ 0, 'slides_url' ];
 
     // match /
     M.t0 = function t0(m, c0, i0, l0, a0) {
@@ -38,7 +44,16 @@ var yr = yr || require('yate/lib/runtime.js');
         r0 += "<h1 class=\"" + "lectureDetail__title big_title" + "\">" + nodeset2xml( ( selectNametest('name', c0, []) ) ) + "</h1>";
         r0 += "<div class=\"" + "lectureDetail_container" + "\">";
         r0 += "<div class=\"" + "lectureDetail__container_info" + "\">";
-        r0 += "<div class=\"" + "lectureDetail_lectorMidl-container" + "\"></div>";
+        r0 += "<div class=\"" + "lectureDetail_lector-container" + "\">";
+        if (!(cmpSN("", m.s(j2, c0)))) {
+            r0 += "<div class=\"" + "lectureDetail__photo-container" + "\">";
+            r0 += "<img class=\"" + "lectureDetail__photo" + "\" src=\"" + nodeset2attrvalue( ( m.s(j2, c0) ) ) + "\" alt=\"" + nodeset2attrvalue( ( m.s(j3, c0) ) ) + "\"/>";
+            r0 += "</div>";
+        }
+        r0 += "<a href=\"" + "#/lectors/" + nodeset2attrvalue( ( m.s(j4, c0) ) ) + "\" class=\"" + "lectureDetail__lector-name-link" + "\">";
+        r0 += "<p class=\"" + "lectureDetail__lector-name" + "\">" + nodeset2xml( ( m.s(j3, c0) ) ) + "</p>";
+        r0 += "</a>";
+        r0 += "</div>";
         if (!(cmpSN("", selectNametest('about', c0, [])))) {
             r0 += "<div class=\"" + "lectureDetail_about" + "\"><p>" + nodeset2xml( ( selectNametest('about', c0, []) ) ) + "</p></div>";
         }

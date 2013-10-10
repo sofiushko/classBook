@@ -1,4 +1,4 @@
-﻿define ('LectureDetailView', ['backbone', 'jquery', 'LectorMidlView', 'lectureDetail.template'], function(Backbone, $, LectorMiniView){
+﻿define ('LectureDetailView', ['backbone', 'jquery', 'lectureDetail.template'], function(Backbone, $){
     return Backbone.View.extend ({
         el: $(".classBook"),
 
@@ -7,18 +7,9 @@
 
         render: function() {
             var compiled_template = yr.run ('lectureDetail', this.model.toJSON());
+            console.log(this.model.toJSON())
             this.$el.html(compiled_template);
-            this.renderLectorMidl();
             return this;
-        },
-
-        renderLectorMidl: function() {
-            var lectorModel = this.model.get('lector');
-            var lectorMiniView = new LectorMiniView({
-                model:lectorModel 
-            });
-            this.$el.find('.lectureDetail_lectorMidl-container').append(lectorMiniView.render().el);
         }
-
      });
 });
