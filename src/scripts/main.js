@@ -23,6 +23,9 @@
         'LectureView': 'views/LectureView', 
         'LecturesPageView': 'views/LecturesPageView',
         'LectureDetailView': 'views/LectureDetailView',
+        'LectorDetailView': 'views/LectorDetailView',
+        'LectorView': 'views/LectorView',
+        'LectorsPageView': 'views/LectorsPageView',
         
 /*-------------collections------------------*/
         'StudentCollection': 'collections/StudentCollection',       
@@ -36,6 +39,8 @@
         'lecture.template': '../templates/lecture.template',
         'studentPersonal.template': '../templates/studentPersonal.template',
         'lectureDetail.template': '../templates/lectureDetail.template',
+        'lectorDetail.template': '../templates/lectorDetail.template',
+        'lector.template': '../templates/lector.template'
     }, 
 
     shim: {
@@ -51,7 +56,8 @@
         'lecture.template': { deps: ['runtime'] },
         'studentPersonal.template': { deps: ['runtime'] },
         'lectureDetail.template': { deps: ['runtime'] },
-
+        'lectorDetail.template': { deps: ['runtime'] },
+        'lector.template': { deps: ['runtime'] }
     }
 });
 
