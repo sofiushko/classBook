@@ -1,15 +1,12 @@
 define ('StudentsPageView', ['backbone', 'jquery', 'StudentView'], function(Backbone, $, StudentView){
     return Backbone.View.extend ({
-        template: _.template('<div class="studentPage__students"></div>'),
-        el: $(".classBook"),
-
-        initialize: function(){
-        },
+        tagName: "div",
+        className: "peoplePage",
 
         render: function() {
             $('.header__menu_item').removeClass('active');
             $('a[href="'+window.location.hash+'"]').parent().addClass('active');
-            this.$el.html(this.template());
+            $('.classBook').html(this.$el)
             this.collection.each(this.renderStudent, this); 
             return this;
         },
@@ -18,7 +15,7 @@ define ('StudentsPageView', ['backbone', 'jquery', 'StudentView'], function(Back
             var studentView = new StudentView({
                 model:item
             });
-            this.$el.find('.studentPage__students').append(studentView.render().el);
+            this.$el.append(studentView.render().el);
         }
 
     });

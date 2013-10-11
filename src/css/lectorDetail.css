@@ -1,0 +1,43 @@
+.lectorDetail {
+    background: #ffffff;
+    padding: 15px 20px;
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    display: table;
+    width: 800px;
+}
+
+.lectorDetail__list-item {
+    display: block;
+    padding-top: 7px;
+}
+
+.lectorDetail_about,
+.lectorDetail__lectures {
+    margin-left: 330px; 
+}
+
+.lectorDetail_about{
+    line-height: 1.4em;    
+}
+
+.lectorDetail__lectures{
+    margin-top: 30px;
+    border-left: 3px solid rgb(0, 130, 200);
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.lectorDetail__photo-container {
+    float: left;
+}
+
+.lectorDetail__photo-container {
+    width: 300px;
+}
+
+.lectorDetail__photo {
+    width: 300px;
+}

@@ -1,8 +1,8 @@
 module "info"
 
 match / {
-    <div class = "info">
-    <h1 class="info__title">{ .title }</h1>
+    <div class = "info content">
+    <h1 class="info__title big_title">{ .title }</h1>
     for .text {
         if .subtitle {
           <h2 class="info__subtitle">{ .subtitle }</h2>

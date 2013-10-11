@@ -40,8 +40,7 @@ var yr = yr || require('yate/lib/runtime.js');
         var r0 = '';
 
         r0 += closeAttrs(a0);
-        r0 += "<div class=\"" + "lectureDetail" + "\">";
-        r0 += "<div class=\"" + "lectureDetail_container" + "\">";
+        r0 += "<div class=\"" + "lectureDetail_container content" + "\">";
         r0 += "<h1 class=\"" + "lectureDetail__title big_title" + "\">" + nodeset2xml( ( selectNametest('name', c0, []) ) ) + "</h1>";
         r0 += "<div class=\"" + "lectureDetail__container_info" + "\">";
         r0 += "<div class=\"" + "lectureDetail_lector-container" + "\">";
@@ -54,22 +53,21 @@ var yr = yr || require('yate/lib/runtime.js');
         r0 += "<p class=\"" + "lectureDetail__lector-name" + "\">" + nodeset2xml( ( m.s(j4, c0) ) ) + "</p>";
         r0 += "</a>";
         r0 += "</div>";
-        if (!(cmpSN("", selectNametest('about', c0, [])))) {
+        if (simpleBoolean('about', c0)) {
             r0 += "<div class=\"" + "lectureDetail_about" + "\"><p>" + nodeset2xml( ( selectNametest('about', c0, []) ) ) + "</p></div>";
         }
         r0 += "<div class=\"" + "lectureDetail_links" + "\">";
         if (simpleBoolean('video_url', c0)) {
             r0 += "<a class=\"" + "lectureDetail_vlink link" + "\" href=\"" + nodeset2attrvalue( ( selectNametest('video_url', c0, []) ) ) + "\" target=\"" + "_blank" + "\">" + "Посмотреть видео" + "</a>";
         }
-        r0 += "</div>";
         if (simpleBoolean('slides_url', c0)) {
             r0 += "<a class=\"" + "lectureDetail_vlink link" + "\" href=\"" + nodeset2attrvalue( ( selectNametest('slides_url', c0, []) ) ) + "\" target=\"" + "_blank" + "\">" + "Посмотреть презентацию" + "</a>";
         }
         r0 += "</div>";
+        r0 += "</div>";
         if (simpleBoolean('slides_url', c0)) {
             r0 += "<iframe class=\"" + "lectureDetail_slideshare" + "\" src=\"" + nodeset2attrvalue( ( selectNametest('slides_url', c0, []) ) ) + "\">" + " " + "</iframe>";
         }
-        r0 += "</div>";
         r0 += "</div>";
 
         return r0;

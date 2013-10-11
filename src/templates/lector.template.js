@@ -32,15 +32,15 @@ var yr = yr || require('yate/lib/runtime.js');
         var r0 = '';
 
         r0 += closeAttrs(a0);
-        r0 += "<a class=\"" + "link student__link" + "\" href=\"" + "#/lectors/" + nodeset2attrvalue( ( selectNametest('id', c0, []) ) ) + "\"><div class=\"" + "lector__container" + "\">";
+        r0 += "<a class=\"" + "link person__link" + "\" href=\"" + "#/lectors/" + nodeset2attrvalue( ( selectNametest('id', c0, []) ) ) + "\"><div class=\"" + "person__container" + "\">";
         if (!(cmpSN("", selectNametest('photo_url', c0, [])))) {
-            r0 += "<div class=\"" + "lector__photo-container" + "\">";
-            r0 += "<img class=\"" + "lector__photo" + "\" src=\"" + nodeset2attrvalue( ( selectNametest('photo_url', c0, []) ) ) + "\" alt=\"" + nodeset2attrvalue( ( selectNametest('name', c0, []) ) ) + "\"/>";
+            r0 += "<div class=\"" + "person__photo-container" + "\">";
+            r0 += "<img class=\"" + "person__photo" + "\" src=\"" + nodeset2attrvalue( ( selectNametest('photo_url', c0, []) ) ) + "\" alt=\"" + nodeset2attrvalue( ( selectNametest('name', c0, []) ) ) + "\"/>";
             r0 += "</div>";
         }
-        r0 += "<div class=\"" + "lector__name-container" + "\">";
-        r0 += "<p class=\"" + "lector__name-container_name" + "\">" + nodeset2xml( ( selectNametest('name', c0, []) ) ) + "</p>";
-        r0 += "<p class=\"" + "lector__name-container_ya" + "\">" + "Яндекс" + "</p>";
+        r0 += "<div class=\"" + "person__name-container" + "\">";
+        r0 += "<p class=\"" + "person__name-container_name" + "\">" + nodeset2xml( ( selectNametest('name', c0, []) ) ) + "</p>";
+        r0 += "<p class=\"" + "person__name-container_info" + "\">" + "Яндекс" + "</p>";
         r0 += "</div>";
         r0 += "</div></a>";
 

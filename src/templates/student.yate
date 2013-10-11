@@ -1,16 +1,16 @@
 module "student"
 
 match / {
-    <a class = "link student__link" href="#/students/{ .id }"><div class = "student__container">
+    <a class = "link person__link" href="#/students/{ .id }"><div class = "person__container">
     	if .link_photo != "" {
-	        <div class = "student__photo-container">
-	            <img class="student__photo" src="{ .link_photo }" alt="{ .first_name} {.last_name }"/>
+	        <div class = "person__photo-container">
+	            <img class="person__photo" src="{ .link_photo }" alt="{ .first_name} {.last_name }"/>
 	        </div>
     	}
-        <div class = "student__name-container">
-            <p class="student__name-container_name">{ .first_name } { .last_name }</p>
+        <div class = "person__name-container">
+            <p class="person__name-container_name">{ .first_name } { .last_name }</p>
             if .city {
-                <p  class="student__name-container_city">{ .city }</p>
+                <p  class="person__name-container_info">{ .city }</p>
             }
         </div>
     </div></a>

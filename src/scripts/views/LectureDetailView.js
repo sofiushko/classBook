@@ -8,7 +8,6 @@
         render: function() {
             var compiled_template = yr.run ('lectureDetail', this.model.toJSON());
             this.$el.html(compiled_template);
-            console.log(this.model.toJSON())
             return this;
         }
      });

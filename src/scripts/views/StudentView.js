@@ -1,7 +1,7 @@
 define('StudentView', ['backbone', 'jquery', 'student.template'], function (Backbone, $) {
     return Backbone.View.extend ({
         tagName: "div",
-        className: "student",
+        className: "person",
         
         initialize: function(){
         },

@@ -1,10 +1,9 @@
 ﻿module "lectureDetail"
 
 match / {
-    <div class="lectureDetail"> 
-        <div class="lectureDetail_container">
-        <h1 class="lectureDetail__title big_title">{ .name }</h1> 
-            <div class = "lectureDetail__container_info">
+    <div class="lectureDetail_container content">
+    <h1 class="lectureDetail__title big_title">{ .name }</h1> 
+        <div class = "lectureDetail__container_info">
             <div class = "lectureDetail_lector-container">
                 <a href = "#/lectors/{.lector.attributes.id}" class = "link lectureDetail_llink">
                     if .lector.attributes.photo_url != "" {
@@ -14,25 +13,24 @@ match / {
                     }
                     <p class="lectureDetail__lector-name">{ .lector.attributes.name }</p>
                 </a>
-                </div>
-     
-                if .about != "" {
-                    <div class = "lectureDetail_about"><p>{ .about }</p></div>
-                }
-                <div class='lectureDetail_links'>
-                    if .video_url {
-                        <a class = "lectureDetail_vlink link" href = "{ .video_url}" target="_blank">Посмотреть видео</a>
-                    }
-                </div>
-                if .slides_url {
-                        <a class = "lectureDetail_vlink link" href = "{ .slides_url}" target="_blank">Посмотреть презентацию</a>
-                }
-                </div>
+            </div>
  
-            if .slides_url {
-                <iframe class="lectureDetail_slideshare" src="{ .slides_url }"> </iframe> 
+            if .about {
+                <div class = "lectureDetail_about"><p>{ .about }</p></div>
             }
+            <div class='lectureDetail_links'>
+                if .video_url {
+                    <a class = "lectureDetail_vlink link" href = "{ .video_url}" target="_blank">Посмотреть видео</a>
+                }
+
+            if .slides_url {
+                    <a class = "lectureDetail_vlink link" href = "{ .slides_url}" target="_blank">Посмотреть презентацию</a>
+            } 
+            </div>
         </div>
-       
+
+        if .slides_url {
+            <iframe class="lectureDetail_slideshare" src="{ .slides_url }"> </iframe> 
+        }
     </div>
 }

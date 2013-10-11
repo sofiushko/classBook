@@ -7,14 +7,14 @@
     display: block;
     z-index:10;
     padding-bottom: 10px;
-    text-align: center;
+    /*text-align: center;*/
 }
 
 .header__menu {
     border-width: 1px 0 0 0;
     border-style: solid;
     border-color: rgb(200, 200, 200);
-    text-align: center;
+    /*text-align: center;*/
 }
 
 .header__menu_item {
@@ -25,12 +25,14 @@
 
 .header__title {
     font-size: 28px;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
+    padding-top: 20px;
+    margin-left: 40px;
 }
 
 .header__menu_item{
-    margin-right: 25px;
-    margin-left: 15px;
+    margin-right: 5px;
+    margin-left: 40px;
     border-width: 3px 0 0 0;
     border-style: solid;
     border-color: rgba(200,52,52,0);
@@ -54,4 +56,9 @@
 .header__lectures:hover,  
 .header__lectures.active{
     border-color: rgb(0,165,140);
+}
+
+.header__lectors:hover,  
+.header__lectors.active{
+    border-color: rgb(0,130,200);
 }

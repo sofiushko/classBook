@@ -36,8 +36,8 @@ var yr = yr || require('yate/lib/runtime.js');
         var r0 = '';
 
         r0 += closeAttrs(a0);
-        r0 += "<div class=\"" + "info" + "\">";
-        r0 += "<h1 class=\"" + "info__title" + "\">" + nodeset2xml( ( selectNametest('title', c0, []) ) ) + "</h1>";
+        r0 += "<div class=\"" + "info content" + "\">";
+        r0 += "<h1 class=\"" + "info__title big_title" + "\">" + nodeset2xml( ( selectNametest('title', c0, []) ) ) + "</h1>";
         var items0 = selectNametest('text', c0, []);
         for (var i1 = 0, l1 = items0.length; i1 < l1; i1++) {
             var c1 = items0[ i1 ];

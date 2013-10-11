@@ -1,11 +1,15 @@
 module "lecture"
 
 match / {
-    <a class = "link lecture__title-link" href="#/lectures/{ .id }"><p class = "lecture__title"> { .name }</p></a>
-    if (.lector.attributes.name) {
-        <a class="link lecture__lector-link" href = "#/lectors/{.lector.attributes.id}" class = "lecture__lector"><p class="lecture__lector-name">{ .lector.attributes.name }</p></a>
-    }
-    if .lecture_date {
-        <p class="lecture_date">{ .lecture_date }</p>
-    }
+    <a class = "link lecture__link" href="#/lectures/{ .id }">
+        <div class="lecture_container">
+            <p class = "lecture__title"> { .name }</p>
+            if (.lector.attributes.name) {
+                <p class="lecture__lector-name">{ .lector.attributes.name }</p>
+            }
+            if .lecture_date {
+                <p class="lecture_date">{ .lecture_date }</p>
+            }
+        </div>
+    </a>
 }

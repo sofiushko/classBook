@@ -1,7 +1,7 @@
 define('LectorView', ['backbone', 'jquery', 'lector.template'], function (Backbone, $) {
     return Backbone.View.extend ({
         tagName: "div",
-        className: "lector",
+        className: "person",
 
         render: function() {
             var compiled_template = yr.run ('lector', this.model.toJSON());

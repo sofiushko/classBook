@@ -1,9 +1,16 @@
-.student {
+.peoplePage {
+    padding: 0;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.person {
     display: inline-block;
 }
 
 
-.student__container {
+.person__container {
     background: #ffffff;
     -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.1);
     -moz-box-shadow: 0 0 5px rgba(0,0,0,0.1);
@@ -16,7 +23,7 @@
 }
 
 
-/*.student__container:hover  {
+/*.person__container:hover  {
     -webkit-box-shadow: 0 0 10px rgba(255,204,0,0.5);
     -moz-box-shadow: 0 0 10px rgba(255,204,0,0.5);
     box-shadow: 0 0 10px rgba(255,204,0,0.5);
@@ -24,25 +31,25 @@
     cursor: pointer;
 }*/
 
-.student__container:hover .student__name-container_name {
+.person__container:hover .person__name-container_name {
     text-decoration: underline;
 }
 
 
-.student__photo-container {
+.person__photo-container {
     overflow: hidden;
     width: 155px;
-    height: 120px;
+    height: 130px;
 }
 
 
-.student__photo {
-    width: 170px;
+.person__photo {
+    width: 180px;
     border: none;
 }
 
 
-.student__name-container {
+.person__name-container {
     font-size: 12px;
     padding-top: 20px;
     background: #ffffff;
@@ -50,15 +57,17 @@
     line-height: 1.4em;
 }
 
-.student__name-container_name {
+.person__name-container_name {
     font-size: 14px;
 }
 
-.student__name-container_city {
+.person__name-container_info {
     color: rgb(150, 150, 150);
     font-size: 11px;
 }
 
-.student__link {
+.person__link {
     text-decoration: none;
+    display: block;
 }
+

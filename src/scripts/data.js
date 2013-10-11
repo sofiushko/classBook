@@ -686,7 +686,7 @@ define('data', [], function () {
                     "id":634,
                     "name":"Последняя миля разработки интерфейсов",
                     "lector_id":192,
-                    "url":"/events/yasubbotnik/msk-jul-2010/talks/917/"
+                    "url":"http://tech.yandex.ru/events/yasubbotnik/msk-jul-2010/talks/917/"
                   },
                   {
                     "id":635,

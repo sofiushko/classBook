@@ -1,11 +1,11 @@
 .personal__title {
     font-size: 24px;
-    margin: 15px;
+    margin: 15px 0;
 }
 
 
 .container_info_about {
-    margin: 0 0 0 280px;
+    margin: 0 0 0 290px;
     /*position: relative;*/
     line-height: 1.4em;
     font-size: 14px;
@@ -19,41 +19,42 @@
     -moz-box-shadow: 0 0 5px rgba(0,0,0,0.2);
     box-shadow: 0 0 5px rgba(0,0,0,0.2);
     display: table;
-    /*width: 85%;*/
     width: 800px;
     margin-left: auto;
     margin-right: auto;
+}
 
+.personal__container_info {
+    float:left;
 }
 
 
 .personal__container_contacts{
-    float: right;
-    /*position: relative;*/
-    /*width: 80px;*/
-    border-left: 3px solid rgb(255,204,0);
-    margin-left: 35px;
-    padding: 5px 10px 15px 15px;
-    z-index: 10;
+    position: relative;
+    clear: both;
+    border-left: 3px solid rgb(255, 204, 0);
+    padding: 15px 0 35px 15px;
+    margin-top: 10px;
 }
 
 .container_info_photo {
-    width: 250px;
+    width: 270px;
     height: auto;
-    /*vertical-align: middle;*/
-    /*border: 0;*/
 }
 
 .photo_container {
-    float: left;
-    margin: 0 30px 0 0;
-    max-height: 300px;
+    margin: 0 20px 0 0;
+    max-height: 250px;
     overflow: hidden;
 }
 
+.list-item-link{
+    float:left;
+}
+
 .icon {
-    width: 16px;
-    height: 16px;
+    width: 24px;
+    height: 24px;
     float:left;
     margin-right: 5px;
 }
@@ -77,9 +78,4 @@
 .list_item {
     margin-top: 15px;
     font-size: 12px;
-}
-
-.contacts_title {
-    font-size: 20px;
-    color: rgb(80,80,80);
 }

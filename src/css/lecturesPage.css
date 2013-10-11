@@ -4,6 +4,10 @@
     margin-left: auto;
     margin-right: auto;
 }
+.lecturesPage {
+    display: block;
+
+}
 
 .lecturesPage__lecture{
     background: #ffffff;
@@ -13,17 +17,20 @@
     border-width: 1px;
     border-style: solid;
     border-color: rgba(200,200,200,0.3); 
-    padding: 15px;
     margin: 3px;
-    float:left;
     width: 362px;
-    height: 40px;
+    height: 65px;
+    display: inline-block;
 }
 
 .lecture__title {
     text-decoration: none;
     font-size: 16px;
     color: rgb(60,60,60);
+}
+
+.lecture_container{
+    padding: 15px;
 }
 
 
@@ -34,13 +41,12 @@
 }
 
 
-.lecture__lector-link, 
-.lecture__title-link{
+.lecture__link{
     text-decoration: none;
+    display: block;
 }
 
-.lecture__lector-link:hover, 
-.lecture__title:hover {
+.lecture__link:hover .lecture__title {
     /*color: rgb(0,165,140);*/
     text-decoration: underline;
 }

@@ -25,15 +25,15 @@ var yr = yr || require('yate/lib/runtime.js');
 
     var j2 = [ 0, 'last_name' ];
 
-    var j3 = [ 0, 'link_facebook' ];
+    var j3 = [ 0, 'link_photo' ];
 
-    var j4 = [ 0, 'link_vk' ];
+    var j4 = [ 0, 'link_facebook' ];
 
-    var j5 = [ 0, 'link_github' ];
+    var j5 = [ 0, 'link_vk' ];
 
-    var j6 = [ 0, 'link_yaru' ];
+    var j6 = [ 0, 'link_github' ];
 
-    var j7 = [ 0, 'link_photo' ];
+    var j7 = [ 0, 'link_yaru' ];
 
     var j8 = [ 0, 'about' ];
 
@@ -43,53 +43,38 @@ var yr = yr || require('yate/lib/runtime.js');
 
         r0 += closeAttrs(a0);
         r0 += "<div class=\"" + "personal" + "\">";
-        r0 += "<div class=\"" + "personal__container" + "\">";
+        r0 += "<div class=\"" + "personal__container content" + "\">";
         r0 += "<h1 class=\"" + "personal__title" + "\">" + nodeset2xml( ( selectNametest('first_name', c0, []) ) ) + " " + nodeset2xml( ( selectNametest('last_name', c0, []) ) ) + "</h1>";
-        r0 += "<div class=\"" + "personal__container_contacts" + "\">";
-        r0 += "<h3 class=\"" + "contacts_title" + "\">" + "Контакты" + "</h3>";
-        r0 += "<ul class=\"" + "contacts_list" + "\">";
-        if (simpleBoolean('link_facebook', c0)) {
-            r0 += "<li class=\"" + "list_item" + "\">";
-            r0 += "<a class=\"" + "list-item-link link" + "\" href=\"" + nodeset2attrvalue( ( selectNametest('link_facebook', c0, []) ) ) + "\" title=\"" + "Facebook" + "\" target=\"" + "_blank" + "\">";
-            r0 += "<div class=\"" + "icon_facebook icon" + "\"></div>";
-            r0 += "Facebook";
-            r0 += "</a>";
-            r0 += "</li>";
-        }
-        if (simpleBoolean('link_vk', c0)) {
-            r0 += "<li class=\"" + "list_item" + "\">";
-            r0 += "<a class=\"" + "list-item-link link" + "\" href=\"" + nodeset2attrvalue( ( selectNametest('link_vk', c0, []) ) ) + "\" title=\"" + "ВКонтакте" + "\" target=\"" + "_blank" + "\">";
-            r0 += "<div class=\"" + "icon_vk icon" + "\"></div>";
-            r0 += "ВКонтакте";
-            r0 += "</a>";
-            r0 += "</li>";
-        }
-        if (simpleBoolean('link_github', c0)) {
-            r0 += "<li class=\"" + "list_item" + "\">";
-            r0 += "<a class=\"" + "list-item-link link" + "\" href=\"" + nodeset2attrvalue( ( selectNametest('link_github', c0, []) ) ) + "\" title=\"" + "GitHub" + "\" target=\"" + "_blank" + "\">";
-            r0 += "<div class=\"" + "icon_github icon" + "\"></div>";
-            r0 += "GitHub";
-            r0 += "</a>";
-            r0 += "</li>";
-        }
-        if (simpleBoolean('link_yaru', c0)) {
-            r0 += "<li class=\"" + "list_item" + "\">";
-            r0 += "<a class=\"" + "list-item-link link" + "\" href=\"" + nodeset2attrvalue( ( selectNametest('link_yaru', c0, []) ) ) + "\" title=\"" + "Я.ру" + "\" target=\"" + "_blank" + "\">";
-            r0 += "<div class=\"" + "icon_ya icon" + "\"></div>";
-            r0 += "Я.ру";
-            r0 += "</a>";
-            r0 += "</li>";
-        }
-        r0 += "</ul>";
-        r0 += "</div>";
         r0 += "<div class=\"" + "personal__container_info" + "\">";
         if (!(cmpSN("", selectNametest('link_photo', c0, [])))) {
             r0 += "<div class=\"" + "photo_container" + "\"><img class=\"" + "container_info_photo" + "\" src=\"" + nodeset2attrvalue( ( selectNametest('link_photo', c0, []) ) ) + "\" alt=\"" + nodeset2attrvalue( ( selectNametest('first_name', c0, []) ) ) + " " + nodeset2attrvalue( ( selectNametest('last_name', c0, []) ) ) + "\"/></div>";
         }
+        r0 += "<div class=\"" + "personal__container_contacts" + "\">";
+        if (simpleBoolean('link_facebook', c0)) {
+            r0 += "<a class=\"" + "list-item-link link" + "\" href=\"" + nodeset2attrvalue( ( selectNametest('link_facebook', c0, []) ) ) + "\" title=\"" + "Facebook" + "\" target=\"" + "_blank" + "\">";
+            r0 += "<div class=\"" + "icon_facebook icon" + "\"></div>";
+            r0 += "</a>";
+        }
+        if (simpleBoolean('link_vk', c0)) {
+            r0 += "<a class=\"" + "list-item-link link" + "\" href=\"" + nodeset2attrvalue( ( selectNametest('link_vk', c0, []) ) ) + "\" title=\"" + "ВКонтакте" + "\" target=\"" + "_blank" + "\">";
+            r0 += "<div class=\"" + "icon_vk icon" + "\"></div>";
+            r0 += "</a>";
+        }
+        if (simpleBoolean('link_github', c0)) {
+            r0 += "<a class=\"" + "list-item-link link" + "\" href=\"" + nodeset2attrvalue( ( selectNametest('link_github', c0, []) ) ) + "\" title=\"" + "GitHub" + "\" target=\"" + "_blank" + "\">";
+            r0 += "<div class=\"" + "icon_github icon" + "\"></div>";
+            r0 += "</a>";
+        }
+        if (simpleBoolean('link_yaru', c0)) {
+            r0 += "<a class=\"" + "list-item-link link" + "\" href=\"" + nodeset2attrvalue( ( selectNametest('link_yaru', c0, []) ) ) + "\" title=\"" + "Я.ру" + "\" target=\"" + "_blank" + "\">";
+            r0 += "<div class=\"" + "icon_ya icon" + "\"></div>";
+            r0 += "</a>";
+        }
+        r0 += "</div>";
+        r0 += "</div>";
         if (!(cmpSN("", selectNametest('about', c0, [])))) {
             r0 += "<div class=\"" + "container_info_about" + "\"><p>" + nodeset2xml( ( selectNametest('about', c0, []) ) ) + "</p></div>";
         }
-        r0 += "</div>";
         r0 += "</div>";
         r0 += "</div>";
 

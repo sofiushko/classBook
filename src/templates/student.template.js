@@ -36,16 +36,16 @@ var yr = yr || require('yate/lib/runtime.js');
         var r0 = '';
 
         r0 += closeAttrs(a0);
-        r0 += "<a class=\"" + "link student__link" + "\" href=\"" + "#/students/" + nodeset2attrvalue( ( selectNametest('id', c0, []) ) ) + "\"><div class=\"" + "student__container" + "\">";
+        r0 += "<a class=\"" + "link person__link" + "\" href=\"" + "#/students/" + nodeset2attrvalue( ( selectNametest('id', c0, []) ) ) + "\"><div class=\"" + "person__container" + "\">";
         if (!(cmpSN("", selectNametest('link_photo', c0, [])))) {
-            r0 += "<div class=\"" + "student__photo-container" + "\">";
-            r0 += "<img class=\"" + "student__photo" + "\" src=\"" + nodeset2attrvalue( ( selectNametest('link_photo', c0, []) ) ) + "\" alt=\"" + nodeset2attrvalue( ( selectNametest('first_name', c0, []) ) ) + " " + nodeset2attrvalue( ( selectNametest('last_name', c0, []) ) ) + "\"/>";
+            r0 += "<div class=\"" + "person__photo-container" + "\">";
+            r0 += "<img class=\"" + "person__photo" + "\" src=\"" + nodeset2attrvalue( ( selectNametest('link_photo', c0, []) ) ) + "\" alt=\"" + nodeset2attrvalue( ( selectNametest('first_name', c0, []) ) ) + " " + nodeset2attrvalue( ( selectNametest('last_name', c0, []) ) ) + "\"/>";
             r0 += "</div>";
         }
-        r0 += "<div class=\"" + "student__name-container" + "\">";
-        r0 += "<p class=\"" + "student__name-container_name" + "\">" + nodeset2xml( ( selectNametest('first_name', c0, []) ) ) + " " + nodeset2xml( ( selectNametest('last_name', c0, []) ) ) + "</p>";
+        r0 += "<div class=\"" + "person__name-container" + "\">";
+        r0 += "<p class=\"" + "person__name-container_name" + "\">" + nodeset2xml( ( selectNametest('first_name', c0, []) ) ) + " " + nodeset2xml( ( selectNametest('last_name', c0, []) ) ) + "</p>";
         if (simpleBoolean('city', c0)) {
-            r0 += "<p class=\"" + "student__name-container_city" + "\">" + nodeset2xml( ( selectNametest('city', c0, []) ) ) + "</p>";
+            r0 += "<p class=\"" + "person__name-container_info" + "\">" + nodeset2xml( ( selectNametest('city', c0, []) ) ) + "</p>";
         }
         r0 += "</div>";
         r0 += "</div></a>";

@@ -27,22 +27,24 @@ var yr = yr || require('yate/lib/runtime.js');
 
     var j3 = [ 0, 'lector', 0, 'attributes', 0, 'name' ];
 
-    var j4 = [ 0, 'lector', 0, 'attributes', 0, 'id' ];
-
-    var j5 = [ 0, 'lecture_date' ];
+    var j4 = [ 0, 'lecture_date' ];
 
     // match /
     M.t0 = function t0(m, c0, i0, l0, a0) {
         var r0 = '';
 
         r0 += closeAttrs(a0);
-        r0 += "<a class=\"" + "link lecture__title-link" + "\" href=\"" + "#/lectures/" + nodeset2attrvalue( ( selectNametest('id', c0, []) ) ) + "\"><p class=\"" + "lecture__title" + "\">" + " " + nodeset2xml( ( selectNametest('name', c0, []) ) ) + "</p></a>";
+        r0 += "<a class=\"" + "link lecture__link" + "\" href=\"" + "#/lectures/" + nodeset2attrvalue( ( selectNametest('id', c0, []) ) ) + "\">";
+        r0 += "<div class=\"" + "lecture_container" + "\">";
+        r0 += "<p class=\"" + "lecture__title" + "\">" + " " + nodeset2xml( ( selectNametest('name', c0, []) ) ) + "</p>";
         if (nodeset2boolean( (m.s(j3, c0)) )) {
-            r0 += "<a class=\"" + "link lecture__lector-link" + "\" href=\"" + "#/lectors/" + nodeset2attrvalue( ( m.s(j4, c0) ) ) + "\" class=\"" + "lecture__lector" + "\"><p class=\"" + "lecture__lector-name" + "\">" + nodeset2xml( ( m.s(j3, c0) ) ) + "</p></a>";
+            r0 += "<p class=\"" + "lecture__lector-name" + "\">" + nodeset2xml( ( m.s(j3, c0) ) ) + "</p>";
         }
         if (simpleBoolean('lecture_date', c0)) {
             r0 += "<p class=\"" + "lecture_date" + "\">" + nodeset2xml( ( selectNametest('lecture_date', c0, []) ) ) + "</p>";
         }
+        r0 += "</div>";
+        r0 += "</a>";
 
         return r0;
     };
