@@ -1,5 +1,5 @@
-define('AppRouter', ['backbone', 'StudentsPageView', 'InfoView', 'StudentPersonalView', 'LecturesPageView', 'App', 'LectureDetailView', 'LectorDetailView'], 
-    function(Backbone, StudentsPageView, InfoView, StudentPersonalView, LecturesPageView, App, LectureDetailView, LectorDetailView) {
+define('AppRouter', ['backbone', 'StudentsPageView', 'InfoView', 'StudentPersonalView', 'LecturesPageView', 'App', 'LectureDetailView', 'LectorDetailView', 'LectorsPageView'], 
+    function(Backbone, StudentsPageView, InfoView, StudentPersonalView, LecturesPageView, App, LectureDetailView, LectorDetailView, LectorsPageView) {
     return Backbone.Router.extend({
  
         routes: {
@@ -7,6 +7,7 @@ define('AppRouter', ['backbone', 'StudentsPageView', 'InfoView', 'StudentPersona
             'lectures': 'renderLectures',
             'students/:student' : 'renderPersonalData',
             'lectures/:lecture' : 'renderLectureDetail',
+            'lectors' : 'renderLectors',
             'lectors/:lector' : 'renderLectorDetail',
             '*actions': 'defaultAction'
             
@@ -53,6 +54,12 @@ define('AppRouter', ['backbone', 'StudentsPageView', 'InfoView', 'StudentPersona
         renderLectorDetail: function(lector) {
             var lectorDetaleView = new LectorDetailView({
                 model: this.app.lectorsC.get(lector)
+            }).render();
+        },
+
+        renderLectors: function() {
+            var lectorsPageView = new LectorsPageView({
+                collection: this.app.lectorsC
             }).render();
         }
        

@@ -1,0 +1,15 @@
+module "lector"
+
+match / {
+    <a class = "link student__link" href="#/lectors/{ .id }"><div class = "lector__container">
+    	if .photo_url != "" {
+	        <div class = "lector__photo-container">
+	            <img class="lector__photo" src="{ .photo_url }" alt="{ .name}"/>
+	        </div>
+    	}
+        <div class = "lector__name-container">
+            <p class="lector__name-container_name">{ .name }</p>
+            <p  class="lector__name-container_ya">Яндекс</p>
+        </div>
+    </div></a>
+}
