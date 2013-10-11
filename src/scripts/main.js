@@ -5,8 +5,6 @@
         'jquery': 'vendor/jquery',
         'underscore': 'vendor/underscore',
         'backbone': 'vendor/backbone',
-        'text' : 'vendor/text',
-        'templates': '../templates',
         'backbone.localstorage': 'vendor/backbone.localStorage',
         'runtime': 'vendor/runtime', //yate runtime
 

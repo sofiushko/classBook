@@ -1,6 +1,6 @@
-define ('StudentsPageView', ['backbone', 'jquery', 'text!templates/studentsPage.template', 'StudentView'], function(Backbone, $, studentsPage_templ, StudentView){
+define ('StudentsPageView', ['backbone', 'jquery', 'StudentView'], function(Backbone, $, StudentView){
     return Backbone.View.extend ({
-        template: _.template( studentsPage_templ ),
+        template: _.template('<div class="studentPage__students"></div>'),
         el: $(".classBook"),
 
         initialize: function(){

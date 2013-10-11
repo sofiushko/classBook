@@ -1,12 +1,12 @@
 define ('LectorsPageView', ['backbone', 'jquery', 'LectorView'], function(Backbone, $, LectorView){
     return Backbone.View.extend ({
-       // template: _.template( studentsPage_templ ),
-        el: $(".content"),
+        template: _.template('<div class="lectorsPage"></div>'),
+        el: $(".classBook"),
 
         render: function() {
             $('.header__menu_item').removeClass('active');
             $('a[href="'+window.location.hash+'"]').parent().addClass('active');
-            $('.loading').remove();
+            this.$el.html(this.template());
             this.collection.each(this.renderLector, this); 
             return this;
         },
@@ -15,7 +15,7 @@ define ('LectorsPageView', ['backbone', 'jquery', 'LectorView'], function(Backbo
             var lectorView = new LectorView({
                 model:item
             });
-            this.$el.append(lectorView.render().el);
+            this.$el.find('.lectorsPage').append(lectorView.render().el);
         }
 
     });
