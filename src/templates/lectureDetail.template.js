@@ -44,7 +44,7 @@ var yr = yr || require('yate/lib/runtime.js');
         r0 += "<div class=\"" + "lectureDetail_container" + "\">";
         r0 += "<h1 class=\"" + "lectureDetail__title big_title" + "\">" + nodeset2xml( ( selectNametest('name', c0, []) ) ) + "</h1>";
         r0 += "<div class=\"" + "lectureDetail__container_info" + "\">";
-        r0 += "<div class=\"" + "link lectureDetail_lector-container" + "\">";
+        r0 += "<div class=\"" + "lectureDetail_lector-container" + "\">";
         r0 += "<a href=\"" + "#/lectors/" + nodeset2attrvalue( ( m.s(j2, c0) ) ) + "\" class=\"" + "link lectureDetail_llink" + "\">";
         if (!(cmpSN("", m.s(j3, c0)))) {
             r0 += "<div class=\"" + "lectureDetail__photo-container" + "\">";

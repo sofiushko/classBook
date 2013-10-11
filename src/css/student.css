@@ -16,12 +16,16 @@
 }
 
 
-.student__container:hover {
+/*.student__container:hover  {
     -webkit-box-shadow: 0 0 10px rgba(255,204,0,0.5);
     -moz-box-shadow: 0 0 10px rgba(255,204,0,0.5);
     box-shadow: 0 0 10px rgba(255,204,0,0.5);
     border-color: rgba(255,224,0,1); 
     cursor: pointer;
+}*/
+
+.student__container:hover .student__name-container_name {
+    text-decoration: underline;
 }
 
 

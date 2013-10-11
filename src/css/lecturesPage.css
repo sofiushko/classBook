@@ -23,6 +23,7 @@
 .lecture__title {
     text-decoration: none;
     font-size: 16px;
+    color: rgb(60,60,60);
 }
 
 
@@ -32,9 +33,6 @@
     vertical-align: bottom; 
 }
 
-.lecture__title {
-    color: rgb(60,60,60);
-}
 
 .lecture__lector-link, 
 .lecture__title-link{
@@ -43,5 +41,6 @@
 
 .lecture__lector-link:hover, 
 .lecture__title:hover {
-    color: rgb(0,165,140);
+    /*color: rgb(0,165,140);*/
+    text-decoration: underline;
 }

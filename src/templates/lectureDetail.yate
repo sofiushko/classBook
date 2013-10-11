@@ -5,7 +5,7 @@ match / {
         <div class="lectureDetail_container">
         <h1 class="lectureDetail__title big_title">{ .name }</h1> 
             <div class = "lectureDetail__container_info">
-            <div class = "link lectureDetail_lector-container">
+            <div class = "lectureDetail_lector-container">
                 <a href = "#/lectors/{.lector.attributes.id}" class = "link lectureDetail_llink">
                     if .lector.attributes.photo_url != "" {
                         <div class = "lectureDetail__photo-container">
