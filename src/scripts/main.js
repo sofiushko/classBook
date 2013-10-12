@@ -51,8 +51,6 @@
         'student.template': { deps: ['runtime'] },
         'info.template': { deps: ['runtime'] },
         'backbone.localstorage': { deps: ['backbone'] },
-        'info.template': { deps: ['runtime'] },
-        'student.template': { deps: ['runtime'] },
         'lecturesPage.template': { deps: ['runtime'] },
         'lecture.template': { deps: ['runtime'] },
         'studentPersonal.template': { deps: ['runtime'] },

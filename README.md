@@ -37,4 +37,5 @@
     * [Backbone.js](http://backbonejs.org/) + [localStorage](https://github.com/jeromegn/Backbone.localStorage)
     * [Underscore.js](http://underscorejs.org/)
     * [jQuery](http://jquery.com/)
-* Шаблонизатор: [Yate](https://github.com/pasaran/yate)
+* Шаблонизатор: 
+    * [Yate](https://github.com/pasaran/yate)

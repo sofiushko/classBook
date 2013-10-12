@@ -25,8 +25,6 @@ define('App', ['backbone', 'StudentCollection', 'data', 'LecturesCollection', 'L
                 collection.add(data);
                 collection.each(function(item) {
                     item.save();}, this);
-            } else {
-                console.log('Loaded from localStorage');
             }
         }
     };
