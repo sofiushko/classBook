@@ -1,0 +1,25 @@
+.navigation {
+    margin-left: 40px;
+    margin-top: 15px;
+    height: 30px;
+}
+
+.navigation__item {
+    float:left;
+    font-size: 14px;
+    color: rgb(50, 50, 50);
+}
+
+.navigation__link {
+    text-decoration: none;
+    color: rgb(50, 50, 50); 
+    float:left;
+}
+
+.navigation__arrow {
+    float: left;
+    margin-left: 2px;
+    background: url(../img/arrow.png);
+    width: 16px;
+    height: 16px;
+}

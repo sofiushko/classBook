@@ -1,0 +1,14 @@
+module "navMenu"
+
+match / {
+    for .*  {
+        <div class="navigation__item">
+            if .href {
+                <a href="{ .href }" class="navigation__link">{ html(.title) }</a>
+                <div class="navigation__arrow"></div>
+            } else {
+                .title
+            }
+        </div>
+    }
+}

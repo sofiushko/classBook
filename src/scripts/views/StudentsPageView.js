@@ -4,9 +4,7 @@ define ('StudentsPageView', ['backbone', 'jquery', 'StudentView'], function(Back
         className: "peoplePage",
 
         render: function() {
-            $('.header__menu_item').removeClass('active');
-            $('a[href="'+window.location.hash+'"]').parent().addClass('active');
-            $('.classBook').html(this.$el)
+            $('.classBook').html(this.$el);
             this.collection.each(this.renderStudent, this); 
             return this;
         },

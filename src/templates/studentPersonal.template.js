@@ -51,24 +51,16 @@ var yr = yr || require('yate/lib/runtime.js');
         }
         r0 += "<div class=\"" + "personal__container_contacts" + "\">";
         if (simpleBoolean('link_facebook', c0)) {
-            r0 += "<a class=\"" + "list-item-link link" + "\" href=\"" + nodeset2attrvalue( ( selectNametest('link_facebook', c0, []) ) ) + "\" title=\"" + "Facebook" + "\" target=\"" + "_blank" + "\">";
-            r0 += "<div class=\"" + "icon_facebook icon" + "\"></div>";
-            r0 += "</a>";
+            r0 += "<a class=\"" + "list-item-link icon_fb" + "\" href=\"" + nodeset2attrvalue( ( selectNametest('link_facebook', c0, []) ) ) + "\" title=\"" + "Facebook" + "\" target=\"" + "_blank" + "\"></a>";
         }
         if (simpleBoolean('link_vk', c0)) {
-            r0 += "<a class=\"" + "list-item-link link" + "\" href=\"" + nodeset2attrvalue( ( selectNametest('link_vk', c0, []) ) ) + "\" title=\"" + "ВКонтакте" + "\" target=\"" + "_blank" + "\">";
-            r0 += "<div class=\"" + "icon_vk icon" + "\"></div>";
-            r0 += "</a>";
+            r0 += "<a class=\"" + "list-item-link icon_vk" + "\" href=\"" + nodeset2attrvalue( ( selectNametest('link_vk', c0, []) ) ) + "\" title=\"" + "ВКонтакте" + "\" target=\"" + "_blank" + "\"></a>";
         }
         if (simpleBoolean('link_github', c0)) {
-            r0 += "<a class=\"" + "list-item-link link" + "\" href=\"" + nodeset2attrvalue( ( selectNametest('link_github', c0, []) ) ) + "\" title=\"" + "GitHub" + "\" target=\"" + "_blank" + "\">";
-            r0 += "<div class=\"" + "icon_github icon" + "\"></div>";
-            r0 += "</a>";
+            r0 += "<a class=\"" + "list-item-link icon_github" + "\" href=\"" + nodeset2attrvalue( ( selectNametest('link_github', c0, []) ) ) + "\" title=\"" + "GitHub" + "\" target=\"" + "_blank" + "\"></a>";
         }
         if (simpleBoolean('link_yaru', c0)) {
-            r0 += "<a class=\"" + "list-item-link link" + "\" href=\"" + nodeset2attrvalue( ( selectNametest('link_yaru', c0, []) ) ) + "\" title=\"" + "Я.ру" + "\" target=\"" + "_blank" + "\">";
-            r0 += "<div class=\"" + "icon_ya icon" + "\"></div>";
-            r0 += "</a>";
+            r0 += "<a class=\"" + "list-item-link icon_ya" + "\" href=\"" + nodeset2attrvalue( ( selectNametest('link_yaru', c0, []) ) ) + "\" title=\"" + "Я.ру" + "\" target=\"" + "_blank" + "\"></a>";
         }
         r0 += "</div>";
         r0 += "</div>";

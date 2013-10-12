@@ -1,6 +1,6 @@
 ﻿define ('LectureDetailView', ['backbone', 'jquery', 'lectureDetail.template'], function(Backbone, $){
     return Backbone.View.extend ({
-        el: $(".classBook"),
+        className: 'content',
 
         initialize: function(){
         },

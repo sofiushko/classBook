@@ -14,6 +14,8 @@
         'LectorModel': 'models/LectorModel',
 
 /*-------------views------------------*/
+        'AppView' : 'views/AppView',
+        'NavigationView' : 'views/NavigationView',
         'StudentView': 'views/StudentView',
         'StudentPersonalView': 'views/StudentPersonalView',
         'StudentsPageView': 'views/StudentsPageView',
@@ -38,7 +40,8 @@
         'studentPersonal.template': '../templates/studentPersonal.template',
         'lectureDetail.template': '../templates/lectureDetail.template',
         'lectorDetail.template': '../templates/lectorDetail.template',
-        'lector.template': '../templates/lector.template'
+        'lector.template': '../templates/lector.template',
+        'navMenu.template': '../templates/navMenu.template'
     }, 
 
     shim: {
@@ -55,15 +58,17 @@
         'studentPersonal.template': { deps: ['runtime'] },
         'lectureDetail.template': { deps: ['runtime'] },
         'lectorDetail.template': { deps: ['runtime'] },
-        'lector.template': { deps: ['runtime'] }
+        'lector.template': { deps: ['runtime'] },
+        'navMenu.template': { deps: ['runtime'] }
     }
 });
 
 
 /*----------initialization---------------*/
 
-require(['jquery', 'AppRouter' ],function( $, AppRouter) {
+require(['jquery', 'App' ],function( $, app) {
     $(function(){
-        var appRouter = new AppRouter();
+        window.App = app;
+        App.initialize();
     });
 });

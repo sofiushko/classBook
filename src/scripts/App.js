@@ -1,5 +1,5 @@
-define('App', ['backbone', 'StudentCollection', 'data', 'LecturesCollection', 'LectorsCollection'], 
-    function (Backbone, StudentCollection,  data, LecturesCollection, LectorsCollection) {
+define('App', ['backbone', 'StudentCollection', 'data', 'LecturesCollection', 'LectorsCollection', 'AppRouter'], 
+    function (Backbone, StudentCollection,  data, LecturesCollection, LectorsCollection, AppRouter) {
     return {
         initialize: function() {
             this.studentsC = new (StudentCollection.extend({
@@ -16,6 +16,7 @@ define('App', ['backbone', 'StudentCollection', 'data', 'LecturesCollection', 'L
             this.fetch(this.lecturesC, data.lecturesData.lectures); 
             this.fetch(this.lectorsC, data.lecturesData.lectors); 
 
+            this.router = new AppRouter();
         },
 
         fetch: function (collection, data) {

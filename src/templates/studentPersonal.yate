@@ -11,24 +11,16 @@ match / {
                 }
             <div class = "personal__container_contacts">
                     if .link_facebook {
-                            <a class = "list-item-link link" href = "{ .link_facebook}" title="Facebook" target="_blank">
-                            <div class = "icon_facebook icon"></div>
-                             </a>
+                            <a class = "list-item-link icon_fb" href = "{ .link_facebook}" title="Facebook" target="_blank"></a>
                     }
                     if .link_vk {
-                            <a class = "list-item-link link" href = "{ .link_vk }" title="ВКонтакте" target="_blank">
-                            <div class = "icon_vk icon"></div>
-                            </a>
+                            <a class = "list-item-link icon_vk" href = "{ .link_vk }" title="ВКонтакте" target="_blank"></a>
                     }
                     if .link_github {
-                            <a class = "list-item-link link" href = "{ .link_github }" title="GitHub" target="_blank">
-                            <div class = "icon_github icon"></div>
-                            </a>
+                            <a class = "list-item-link icon_github" href = "{ .link_github }" title="GitHub" target="_blank"></a>
                     }
                     if .link_yaru {
-                            <a class = "list-item-link link" href = "{.link_yaru}" title="Я.ру" target="_blank">
-                            <div class = "icon_ya icon"></div>
-                            </a>
+                            <a class = "list-item-link icon_ya" href = "{.link_yaru}" title="Я.ру" target="_blank"></a>
                      }
             </div>
             </div>

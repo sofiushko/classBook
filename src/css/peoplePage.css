@@ -19,6 +19,7 @@
     border-style: solid;
     border-color: rgba(200,200,200,0.3); 
     padding: 15px;
+    padding-bottom: 0;
     margin: 3px;
 }
 
@@ -52,9 +53,13 @@
 .person__name-container {
     font-size: 12px;
     padding-top: 20px;
+    padding-bottom: 23px;
     background: #ffffff;
     color: rgba(100,100,100,1);
     line-height: 1.4em;
+    width: 155px;
+    height: 30px;
+    overflow: hidden;
 }
 
 .person__name-container_name {

@@ -50,12 +50,8 @@
 
 .list-item-link{
     float:left;
-}
-
-.icon {
     width: 24px;
     height: 24px;
-    float:left;
     margin-right: 5px;
 }
 
@@ -63,7 +59,7 @@
     background:url(../img/ya.png);
 }
 
-.icon_facebook {
+.icon_fb{
     background:url(../img/fb.png);
 }
 

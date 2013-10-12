@@ -1,13 +1,11 @@
 define ('LecturesPageView', ['backbone', 'jquery', 'LectureView', 'lecturesPage.template'], function(Backbone, $, LectureView){
     return Backbone.View.extend ({
-        el: $(".classBook"),
+        className: 'content',
 
         initialize: function(){
         },
 
         render: function() {
-            $('.header__menu_item').removeClass('active');
-            $('a[href="'+window.location.hash+'"]').parent().addClass('active');
             var compiled_template = yr.run ('lecturesPage');
             this.$el.html(compiled_template);
             this.collection.each(this.renderLecture, this); 
