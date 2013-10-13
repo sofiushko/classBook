@@ -1,7 +1,7 @@
 ﻿module "lectureDetail"
 
 match / {
-    <div class="lectureDetail_container content">
+    <div class="lectureDetail_container">
     <h1 class="lectureDetail__title big_title">{ .name }</h1> 
         <div class = "lectureDetail__container_info">
             <div class = "lectureDetail_lector-container">
