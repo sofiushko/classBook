@@ -1,7 +1,7 @@
 ﻿module "lectorDetail"
 
 match / {
-    <div class="lectorDetail content">
+    <div class="lectorDetail">
         <h1 class="lectorDetail__title big_title">{ .name }</h1>
             <div class = "lectorDetail__container_info">
                 if .photo_url !="" {

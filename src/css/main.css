@@ -28,8 +28,17 @@ body {
     height: 100%;
 }
 
+.mainContent {
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
 .classBook {
-    padding-bottom: 70px;   
+    padding-bottom: 10px; 
+    float:left;  
+    margin-right: 20px;
+    margin-left: auto;
+    margin-right: auto
 }
 
 .link {
@@ -43,7 +52,22 @@ body {
 }
 
 .content{
-    /*margin-left: 30px;*/
-    margin-left: auto;
-    margin-right: auto;
+    padding: 15px 20px;
+    background: #ffffff;
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    width: 750px;
+}
+
+.twitter-timeline {
+    height:  500px;
+    width: 300px; 
+}
+
+.twitter__container {
+    width:25%;
+    float: left;
+    padding-left: 30px;
+
 }

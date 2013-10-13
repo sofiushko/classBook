@@ -1,13 +1,12 @@
 define ('LecturesPageView', ['backbone', 'jquery', 'LectureView', 'lecturesPage.template'], function(Backbone, $, LectureView){
     return Backbone.View.extend ({
-        className: 'content',
+        className: 'lecturesPage',
 
         initialize: function(){
         },
 
         render: function() {
-            var compiled_template = yr.run ('lecturesPage');
-            this.$el.html(compiled_template);
+            $('.classBook').html(this.$el);
             this.collection.each(this.renderLecture, this); 
             return this;
         },
@@ -18,7 +17,7 @@ define ('LecturesPageView', ['backbone', 'jquery', 'LectureView', 'lecturesPage.
             var lectureView = new LectureView({
                 model:item
             });
-            this.$el.find('.lecturesPage__lectures').append(lectureView.render().el);
+            this.$el.append(lectureView.render().el);
           },
     });
 });

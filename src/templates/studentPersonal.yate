@@ -2,7 +2,6 @@ module "studentPersonal"
 
 match / {
     <div class="personal">
-        <div class = "personal__container content">
         <h1 class="personal__title">{ .first_name } {.last_name}</h1>
             
             <div class = "personal__container_info">
@@ -27,7 +26,5 @@ match / {
                 if .about != "" {
                     <div class = "container_info_about"><p>{ .about }</p></div>
                 }
-            
-        </div>
     </div>
 }

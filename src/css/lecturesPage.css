@@ -1,11 +1,8 @@
-.lecturesPage__lectures {
+.lecturesPage {
     padding: 0;
-    max-width: 800px;
+    width: 790px;
     margin-left: auto;
     margin-right: auto;
-}
-.lecturesPage {
-    display: block;
 
 }
 
@@ -18,7 +15,7 @@
     border-style: solid;
     border-color: rgba(200,200,200,0.3); 
     margin: 3px;
-    width: 362px;
+    width: 378px;
     height: 65px;
     display: inline-block;
 }

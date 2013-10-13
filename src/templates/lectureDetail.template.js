@@ -40,7 +40,7 @@ var yr = yr || require('yate/lib/runtime.js');
         var r0 = '';
 
         r0 += closeAttrs(a0);
-        r0 += "<div class=\"" + "lectureDetail_container content" + "\">";
+        r0 += "<div class=\"" + "lectureDetail_container" + "\">";
         r0 += "<h1 class=\"" + "lectureDetail__title big_title" + "\">" + nodeset2xml( ( selectNametest('name', c0, []) ) ) + "</h1>";
         r0 += "<div class=\"" + "lectureDetail__container_info" + "\">";
         r0 += "<div class=\"" + "lectureDetail_lector-container" + "\">";

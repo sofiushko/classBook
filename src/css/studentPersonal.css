@@ -3,6 +3,10 @@
     margin: 15px 0;
 }
 
+.personal{
+    display:table;
+}
+
 
 .container_info_about {
     margin: 0 0 0 290px;
@@ -12,17 +16,7 @@
 }
 
 
-.personal__container {
-    background: #ffffff;
-    padding: 15px 20px;
-    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.2);
-    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.2);
-    box-shadow: 0 0 5px rgba(0,0,0,0.2);
-    display: table;
-    width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
+
 
 .personal__container_info {
     float:left;
