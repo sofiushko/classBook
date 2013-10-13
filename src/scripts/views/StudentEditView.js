@@ -1,13 +1,14 @@
 define('StudentEditView', ['backbone', 'jquery', 'studentEdit.template'], function (Backbone, $) {
     return Backbone.View.extend ({
         tagName: "div",
-        className: "editPerson",
+        className: "content",
         
         initialize: function(){
         },
 
         events: {
             'click  .edit-container__submit': 'applyEdit',
+            'click  .edit-container__cancel': 'cancelEdit',
         },
 
         render: function() {
@@ -16,11 +17,27 @@ define('StudentEditView', ['backbone', 'jquery', 'studentEdit.template'], functi
             return this;
         },
 
-        applyEdit: function(e) {
+        applyEdit: function() {
+            var form = $(".personalEdit__form");
+            var formJSON = this.serializeJson(form);
+            this.model.save(formJSON);
 
             Backbone.history.navigate('#/students/'+this.model.get("id"), {trigger: true});
         },
 
+        serializeJson: function(form) {
+            var outJson = {};
+            var formData = form.serializeArray();
+            _.each(formData, function(param){
+                outJson[param.name] = param.value;
+            }, this);
+
+            return outJson;
+        },
+
+        cancelEdit: function(e) {
+            Backbone.history.navigate('#/students/'+this.model.get("id"), {trigger: true});
+        },
         
     });
 });
