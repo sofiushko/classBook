@@ -35,7 +35,6 @@
 /*-------------yate js templates------------------*/
         'info.template': '../templates/info.template',
         'student.template': '../templates/student.template',
-        'lecturesPage.template': '../templates/lecturesPage.template',
         'lecture.template': '../templates/lecture.template',
         'studentPersonal.template': '../templates/studentPersonal.template',
         'lectureDetail.template': '../templates/lectureDetail.template',
@@ -51,7 +50,6 @@
         'student.template': { deps: ['runtime'] },
         'info.template': { deps: ['runtime'] },
         'backbone.localstorage': { deps: ['backbone'] },
-        'lecturesPage.template': { deps: ['runtime'] },
         'lecture.template': { deps: ['runtime'] },
         'studentPersonal.template': { deps: ['runtime'] },
         'lectureDetail.template': { deps: ['runtime'] },

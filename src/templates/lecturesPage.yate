@@ -1,7 +1,0 @@
-module "lecturesPage"
-
-match / {
-    <div class="lecturesPage">
-        <div class="lecturesPage__lectures"></div>
-    </div>
-}
