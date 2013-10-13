@@ -8,6 +8,7 @@
 @import url("peoplePage.css");
 @import url("lectorDetail.css");
 @import url("navMenu.css");
+@import url("studentEdit.css");
 
 html {
     height: 100%;

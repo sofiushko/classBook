@@ -1,0 +1,41 @@
+.personalEdit {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.line-edit,
+.textarea-edit {
+    width:100%;
+    margin-top: 6px;
+    margin-bottom: 18px;
+    padding: 5px;
+    color: rgb(70,70,70)
+}
+
+.edit-container__label {
+    font-size: 13px;
+}
+
+.textarea-edit {
+    height: 100px;
+    max-width: 100%;
+}
+
+.buttons {
+    text-align: right;
+}
+
+.button {
+    border: 1px solid rgb(200, 200, 200);
+    background-color: rgb(170, 170, 170);
+    width: 120px;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+    height: 25px;
+    line-height: 28px;
+    margin: 10px 10px 0 0;
+    display: inline-block;
+}

@@ -44,6 +44,7 @@ var yr = yr || require('yate/lib/runtime.js');
         r0 += closeAttrs(a0);
         r0 += "<div class=\"" + "personal" + "\">";
         r0 += "<h1 class=\"" + "personal__title" + "\">" + nodeset2xml( ( selectNametest('first_name', c0, []) ) ) + " " + nodeset2xml( ( selectNametest('last_name', c0, []) ) ) + "</h1>";
+        r0 += "<div class=\"" + "personal__edit-button" + "\" title=\"" + "Редактировать" + "\"></div>";
         r0 += "<div class=\"" + "personal__container_info" + "\">";
         if (!(cmpSN("", selectNametest('link_photo', c0, [])))) {
             r0 += "<div class=\"" + "photo_container" + "\"><img class=\"" + "container_info_photo" + "\" src=\"" + nodeset2attrvalue( ( selectNametest('link_photo', c0, []) ) ) + "\" alt=\"" + nodeset2attrvalue( ( selectNametest('first_name', c0, []) ) ) + " " + nodeset2attrvalue( ( selectNametest('last_name', c0, []) ) ) + "\"/></div>";
