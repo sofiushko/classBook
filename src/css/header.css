@@ -1,0 +1,64 @@
+.header {
+    background: #ffffff;
+    width: 100%; 
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    display: block;
+    z-index:10;
+    padding-bottom: 10px;
+    /*text-align: center;*/
+}
+
+.header__menu {
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: rgb(200, 200, 200);
+    /*text-align: center;*/
+}
+
+.header__menu_item {
+    display: inline-block;
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+.header__title {
+    font-size: 28px;
+    padding-bottom: 15px;
+    padding-top: 20px;
+    margin-left: 40px;
+}
+
+.header__menu_item{
+    margin-right: 5px;
+    margin-left: 40px;
+    border-width: 3px 0 0 0;
+    border-style: solid;
+    border-color: rgba(200,52,52,0);
+}
+
+.header__link{
+    text-decoration: none;
+    color: rgb(100, 100, 100)
+}
+
+.header__info:hover,  
+.header__info.active{
+    border-color: rgb(220,52,52);
+}
+
+.header__students:hover, 
+.header__students.active {
+    border-color: rgb(255,204,0);
+}
+
+.header__lectures:hover,  
+.header__lectures.active{
+    border-color: rgb(0,165,140);
+}
+
+.header__lectors:hover,  
+.header__lectors.active{
+    border-color: rgb(0,130,200);
+}

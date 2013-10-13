@@ -1,0 +1,77 @@
+.personal__title {
+    font-size: 24px;
+    margin: 15px 0;
+}
+
+
+.container_info_about {
+    margin: 0 0 0 290px;
+    /*position: relative;*/
+    line-height: 1.4em;
+    font-size: 14px;
+}
+
+
+.personal__container {
+    background: #ffffff;
+    padding: 15px 20px;
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    display: table;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.personal__container_info {
+    float:left;
+}
+
+
+.personal__container_contacts{
+    position: relative;
+    clear: both;
+    border-left: 3px solid rgb(255, 204, 0);
+    padding: 15px 0 35px 15px;
+    margin-top: 10px;
+}
+
+.container_info_photo {
+    width: 270px;
+    height: auto;
+}
+
+.photo_container {
+    margin: 0 20px 0 0;
+    max-height: 250px;
+    overflow: hidden;
+}
+
+.list-item-link{
+    float:left;
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+}
+
+.icon_ya {
+    background:url(../img/ya.png);
+}
+
+.icon_fb{
+    background:url(../img/fb.png);
+}
+
+.icon_vk {
+    background:url(../img/vk.png);
+}
+
+.icon_github {
+    background:url(../img/gh.png);
+}
+
+.list_item {
+    margin-top: 15px;
+    font-size: 12px;
+}

@@ -1,0 +1,22 @@
+﻿module "lectorDetail"
+
+match / {
+    <div class="lectorDetail content">
+        <h1 class="lectorDetail__title big_title">{ .name }</h1>
+            <div class = "lectorDetail__container_info">
+                if .photo_url !="" {
+                      <div class = "lectorDetail__photo-container"><img class = "lectorDetail__photo"  src="{ .photo_url }" alt="{ .first_name} {.last_name }"/></div> 
+                    }
+                if .about != "" {
+                    <div class = "lectorDetail_about"><p>{ .about }</p></div>
+                }
+            </div>
+            <div class="lectorDetail__lectures">
+            <p class ="lectorDetail__list-title">Лекции:</p>
+                for .all_lectures {
+                     <a class = "lectorDetail__list-item link" href = "{ .url}"  target="_blank">{ .name }</a>
+                }
+
+            </div>    
+    </div>
+}

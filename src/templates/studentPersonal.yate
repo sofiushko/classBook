@@ -1,0 +1,33 @@
+module "studentPersonal"
+
+match / {
+    <div class="personal">
+        <div class = "personal__container content">
+        <h1 class="personal__title">{ .first_name } {.last_name}</h1>
+            
+            <div class = "personal__container_info">
+                if .link_photo !="" {
+                      <div class = "photo_container"><img class = "container_info_photo"  src="{ .link_photo }" alt="{ .first_name} {.last_name }"/></div> 
+                }
+            <div class = "personal__container_contacts">
+                    if .link_facebook {
+                            <a class = "list-item-link icon_fb" href = "{ .link_facebook}" title="Facebook" target="_blank"></a>
+                    }
+                    if .link_vk {
+                            <a class = "list-item-link icon_vk" href = "{ .link_vk }" title="ВКонтакте" target="_blank"></a>
+                    }
+                    if .link_github {
+                            <a class = "list-item-link icon_github" href = "{ .link_github }" title="GitHub" target="_blank"></a>
+                    }
+                    if .link_yaru {
+                            <a class = "list-item-link icon_ya" href = "{.link_yaru}" title="Я.ру" target="_blank"></a>
+                     }
+            </div>
+            </div>
+                if .about != "" {
+                    <div class = "container_info_about"><p>{ .about }</p></div>
+                }
+            
+        </div>
+    </div>
+}

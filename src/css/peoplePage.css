@@ -1,0 +1,78 @@
+.peoplePage {
+    padding: 0;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.person {
+    display: inline-block;
+}
+
+
+.person__container {
+    background: #ffffff;
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(200,200,200,0.3); 
+    padding: 15px;
+    padding-bottom: 0;
+    margin: 3px;
+}
+
+
+/*.person__container:hover  {
+    -webkit-box-shadow: 0 0 10px rgba(255,204,0,0.5);
+    -moz-box-shadow: 0 0 10px rgba(255,204,0,0.5);
+    box-shadow: 0 0 10px rgba(255,204,0,0.5);
+    border-color: rgba(255,224,0,1); 
+    cursor: pointer;
+}*/
+
+.person__container:hover .person__name-container_name {
+    text-decoration: underline;
+}
+
+
+.person__photo-container {
+    overflow: hidden;
+    width: 155px;
+    height: 130px;
+}
+
+
+.person__photo {
+    width: 180px;
+    border: none;
+}
+
+
+.person__name-container {
+    font-size: 12px;
+    padding-top: 20px;
+    padding-bottom: 23px;
+    background: #ffffff;
+    color: rgba(100,100,100,1);
+    line-height: 1.4em;
+    width: 155px;
+    height: 30px;
+    overflow: hidden;
+}
+
+.person__name-container_name {
+    font-size: 14px;
+}
+
+.person__name-container_info {
+    color: rgb(150, 150, 150);
+    font-size: 11px;
+}
+
+.person__link {
+    text-decoration: none;
+    display: block;
+}
+

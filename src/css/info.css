@@ -1,0 +1,35 @@
+.info {
+    background: #ffffff;
+    padding: 15px 20px;
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    width: 800px;
+}
+
+.info__title {
+    font-size: 24px;
+
+}
+
+.info__subtitle {
+    font-size: 22px;
+    color: rgb(220,52,52);
+}
+
+.info__susubtitle{
+    font-size: 18px; 
+    margin-top: 10px;
+}
+
+.info__text {
+    margin: 10px 0;
+    font-size: 14px;
+    line-height: 1.4em;
+}
+
+.info__photo {
+    float: right;
+    width: 400px;
+    margin: 15px;
+}
