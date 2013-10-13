@@ -20,9 +20,24 @@ define('StudentEditView', ['backbone', 'jquery', 'studentEdit.template'], functi
         applyEdit: function() {
             var form = $(".personalEdit__form");
             var formJSON = this.serializeJson(form);
-            this.model.save(formJSON);
+           
+            var error = true;
 
-            Backbone.history.navigate('#/students/'+this.model.get("id"), {trigger: true});
+            this.model.save(formJSON, {
+                success: function (model, response) {
+                    Backbone.history.navigate('#/students/'+model.get("id"), {trigger: true});
+                    error = false;
+                },
+                error: function (model, error) { //not trigger this
+                    console.log("error0");
+                }
+            });
+
+            if (error) {
+                alert("Ошибка заполнения формы.\nИмя и фамилия должны быть заполнены!")                    
+            };
+        
+         
         },
 
         serializeJson: function(form) {
@@ -35,7 +50,7 @@ define('StudentEditView', ['backbone', 'jquery', 'studentEdit.template'], functi
             return outJson;
         },
 
-        cancelEdit: function(e) {
+        cancelEdit: function() {
             Backbone.history.navigate('#/students/'+this.model.get("id"), {trigger: true});
         },
         

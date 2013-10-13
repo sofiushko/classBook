@@ -104,7 +104,6 @@ define('AppRouter', ['backbone', 'StudentsPageView', 'InfoView', 'StudentPersona
 
  /*-----------render student edit page--------*/
         renderStudentEdit: function(student) {
-            console.log("!!!")
             var studentM = App.studentsC.get(student);
             var name = studentM.get('first_name')+' '+ studentM.get('last_name');
             App.AppView.setContent(StudentEditView, {
