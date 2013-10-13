@@ -3,7 +3,7 @@ module "studentPersonal"
 match / {
     <div class="personal">
         <h1 class="personal__title">{ .first_name } {.last_name}</h1>
-            
+        <div class="personal__edit-button" title="Редактировать"></div>
             <div class = "personal__container_info">
                 if .link_photo !="" {
                       <div class = "photo_container"><img class = "container_info_photo"  src="{ .link_photo }" alt="{ .first_name} {.last_name }"/></div> 
