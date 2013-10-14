@@ -1,15 +1,18 @@
-define('AppRouter', ['backbone', 'StudentsPageView', 'InfoView', 'StudentPersonalView', 'LecturesPageView', 'LectureDetailView', 'LectorDetailView', 'LectorsPageView', 'AppView'], 
-    function(Backbone, StudentsPageView, InfoView, StudentPersonalView, LecturesPageView, LectureDetailView, LectorDetailView, LectorsPageView, AppView) {
+define('AppRouter', ['backbone', 'StudentsPageView', 'InfoView', 'StudentPersonalView', 'LecturesPageView', 'LectureDetailView', 'LectorDetailView', 'LectorsPageView', 'AppView', 'StudentEditView'], 
+    function(Backbone, StudentsPageView, InfoView, StudentPersonalView, LecturesPageView, LectureDetailView, LectorDetailView, LectorsPageView, AppView, StudentEditView) {
     return Backbone.Router.extend({
  
         routes: {
             'students': 'renderStudents',
             'lectures': 'renderLectures',
+            'students/add' : 'renderNewStudentEdit',
             'students/:student' : 'renderPersonalData',
             'lectures/:lecture' : 'renderLectureDetail',
             'lectors' : 'renderLectors',
             'lectors/:lector' : 'renderLectorDetail',
-            '*actions': 'defaultAction'
+            'students/:student/edit' : 'renderStudentEdit',
+            '*actions': 'defaultAction',
+            
             
         },
 
@@ -98,7 +101,45 @@ define('AppRouter', ['backbone', 'StudentsPageView', 'InfoView', 'StudentPersona
                 collection: App.lectorsC
             });
             App.AppView.Navigation.setNavigation("/lectors");
+        },
+
+ /*-----------render student edit page--------*/
+        renderStudentEdit: function(student) {
+            var studentM = App.studentsC.get(student);
+            var name = studentM.get('first_name')+' '+ studentM.get('last_name');
+            App.AppView.setContent(StudentEditView, {
+                 model: studentM,
+                 mode: "edit"
+             });
+            App.AppView.Navigation.setNavigation("/students",
+                [{
+                    title: "Студенты",
+                    href: "#/students"
+                },
+                {
+                    title: name,
+                    href: "#/students/"+studentM.get("id")
+                },
+                {
+                    title: "Редактирование"
+                }
+            ]);
+        }, 
+
+        renderNewStudentEdit: function() {
+            App.AppView.setContent(StudentEditView, {mode: "create"});
+            App.AppView.Navigation.setNavigation("/students",
+                [{
+                    title: "Студенты",
+                    href: "#/students"
+                },
+                {
+                    title: "Добавление нового студента",
+                }
+            ]);
+
         }
+       
        
     });
 });

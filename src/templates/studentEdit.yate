@@ -1,0 +1,75 @@
+module "studentEdit"
+
+match / {
+    <div class="personalEdit">
+    <form class = "personalEdit__form">
+        <div class = "personalEdit__edit-container">
+            <label class="edit-container__label">Имя</label>
+            <div class="edit-container__area">
+                <input value="{ .first_name }" name="first_name"type="text"  class="line-edit"></input>
+            </div>
+        </div>
+
+        <div class = "personalEdit__edit-container">
+            <label class="edit-container__label">Фамилия</label>
+            <div class="edit-container__area">
+                <input value="{ .last_name }" name="last_name"type="text" class="line-edit"></input>
+            </div>
+        </div>
+
+        <div class = "personalEdit__edit-container">
+            <label class="edit-container__label">Город</label>
+            <div class="edit-container__area">
+                <input value="{ .city }" name="city"type="text"  class="line-edit"></input>
+            </div>
+        </div>
+
+        <div class = "personalEdit__edit-container">
+            <label class="edit-container__label">Ссылка на фото</label>
+            <div class="edit-container__area">
+                <input value="{ .link_photo }" name="link_photo"type="text"  class="line-edit"></input>
+            </div>
+        </div>
+
+        <div class = "personalEdit__edit-container">
+            <label class="edit-container__label">Ссылка на Facebook</label>
+            <div class="edit-container__area">
+                <input value="{ .link_facebook }" name="link_facebook"type="text" class="line-edit"></input>
+            </div>
+        </div>
+
+        <div class = "personalEdit__edit-container">
+            <label class="edit-container__label">Ссылка на ВКонтакте</label>
+            <div class="edit-container__area">
+                <input value="{ .link_vk }" name="link_vk"type="text"  class="line-edit"></input>
+            </div>
+        </div>
+
+        <div class = "personalEdit__edit-container">
+            <label class="edit-container__label">Ссылка на GitHub</label>
+            <div class="edit-container__area">
+                <input value="{ .link_github }" name="link_github"type="text"  class="line-edit"></input>
+            </div>
+        </div>
+
+        <div class = "personalEdit__edit-container">
+            <label class="edit-container__label">Ссылка на Я.ру</label>
+            <div class="edit-container__area">
+                <input value="{ .link_yaru }" name="link_yaru"type="text"  class="line-edit"></input>
+            </div>
+        </div>
+
+         <div class = "personalEdit__edit-container">
+            <label class="edit-container__label">О студенте</label>
+            <div class="edit-container__area">
+                <textarea name="about"  class="textarea-edit">{ .about }</textarea>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <div class="edit-container__submit button" value="Сохранить">Сохранить</div>
+            <div  class="edit-container__cancel button" value="Отмена">Отмена</div>
+        </div>
+        </form>
+    </div>
+}

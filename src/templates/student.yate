@@ -2,11 +2,13 @@ module "student"
 
 match / {
     <a class = "link person__link" href="#/students/{ .id }"><div class = "person__container">
-    	if .link_photo != "" {
-	        <div class = "person__photo-container">
+    	    <div class = "person__photo-container">
+            if .link_photo != "" {
 	            <img class="person__photo" src="{ .link_photo }" alt="{ .first_name} {.last_name }"/>
-	        </div>
-    	}
+	        } else {
+                <img class="person__photo" src="img/defaultPhoto.jpg" alt="{ .first_name} {.last_name }"/>  
+            }
+        </div>
         <div class = "person__name-container">
             <p class="person__name-container_name">{ .first_name } { .last_name }</p>
             if .city {

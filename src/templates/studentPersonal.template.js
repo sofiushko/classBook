@@ -43,11 +43,14 @@ var yr = yr || require('yate/lib/runtime.js');
 
         r0 += closeAttrs(a0);
         r0 += "<div class=\"" + "personal" + "\">";
-        r0 += "<div class=\"" + "personal__container content" + "\">";
         r0 += "<h1 class=\"" + "personal__title" + "\">" + nodeset2xml( ( selectNametest('first_name', c0, []) ) ) + " " + nodeset2xml( ( selectNametest('last_name', c0, []) ) ) + "</h1>";
+        r0 += "<div class=\"" + "personal__edit-button" + "\" title=\"" + "Редактировать" + "\"></div>";
+        r0 += "<div class=\"" + "personal__del-button" + "\" title=\"" + "Удалить" + "\"></div>";
         r0 += "<div class=\"" + "personal__container_info" + "\">";
         if (!(cmpSN("", selectNametest('link_photo', c0, [])))) {
             r0 += "<div class=\"" + "photo_container" + "\"><img class=\"" + "container_info_photo" + "\" src=\"" + nodeset2attrvalue( ( selectNametest('link_photo', c0, []) ) ) + "\" alt=\"" + nodeset2attrvalue( ( selectNametest('first_name', c0, []) ) ) + " " + nodeset2attrvalue( ( selectNametest('last_name', c0, []) ) ) + "\"/></div>";
+        } else {
+            r0 += "<div class=\"" + "photo_container" + "\"><img class=\"" + "container_info_photo" + "\" src=\"" + "img/defaultPhoto.jpg" + "\" alt=\"" + nodeset2attrvalue( ( selectNametest('first_name', c0, []) ) ) + " " + nodeset2attrvalue( ( selectNametest('last_name', c0, []) ) ) + "\"/></div>";
         }
         r0 += "<div class=\"" + "personal__container_contacts" + "\">";
         if (simpleBoolean('link_facebook', c0)) {
@@ -67,7 +70,6 @@ var yr = yr || require('yate/lib/runtime.js');
         if (!(cmpSN("", selectNametest('about', c0, [])))) {
             r0 += "<div class=\"" + "container_info_about" + "\"><p>" + nodeset2xml( ( selectNametest('about', c0, []) ) ) + "</p></div>";
         }
-        r0 += "</div>";
         r0 += "</div>";
 
         return r0;

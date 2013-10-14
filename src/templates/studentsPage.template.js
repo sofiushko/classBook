@@ -26,9 +26,7 @@ var yr = yr || require('yate/lib/runtime.js');
         var r0 = '';
 
         r0 += closeAttrs(a0);
-        r0 += "<div class=\"" + "lecturesPage" + "\">";
-        r0 += "<div class=\"" + "lecturesPage__lectures" + "\"></div>";
-        r0 += "</div>";
+        r0 += "<div class=\"" + "studentPage__add-button" + "\">" + "Добавить студента" + "</div>";
 
         return r0;
     };
@@ -44,6 +42,6 @@ var yr = yr || require('yate/lib/runtime.js');
     };
     M.imports = [];
 
-    yr.register('lecturesPage', M);
+    yr.register('studentsPage', M);
 
 })();

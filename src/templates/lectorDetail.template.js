@@ -40,7 +40,7 @@ var yr = yr || require('yate/lib/runtime.js');
         var r0 = '';
 
         r0 += closeAttrs(a0);
-        r0 += "<div class=\"" + "lectorDetail content" + "\">";
+        r0 += "<div class=\"" + "lectorDetail" + "\">";
         r0 += "<h1 class=\"" + "lectorDetail__title big_title" + "\">" + nodeset2xml( ( selectNametest('name', c0, []) ) ) + "</h1>";
         r0 += "<div class=\"" + "lectorDetail__container_info" + "\">";
         if (!(cmpSN("", selectNametest('photo_url', c0, [])))) {

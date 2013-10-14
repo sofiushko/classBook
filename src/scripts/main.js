@@ -26,6 +26,7 @@
         'LectorDetailView': 'views/LectorDetailView',
         'LectorView': 'views/LectorView',
         'LectorsPageView': 'views/LectorsPageView',
+        'StudentEditView': 'views/StudentEditView',
         
 /*-------------collections------------------*/
         'StudentCollection': 'collections/StudentCollection',       
@@ -35,13 +36,14 @@
 /*-------------yate js templates------------------*/
         'info.template': '../templates/info.template',
         'student.template': '../templates/student.template',
-        'lecturesPage.template': '../templates/lecturesPage.template',
         'lecture.template': '../templates/lecture.template',
         'studentPersonal.template': '../templates/studentPersonal.template',
         'lectureDetail.template': '../templates/lectureDetail.template',
         'lectorDetail.template': '../templates/lectorDetail.template',
         'lector.template': '../templates/lector.template',
-        'navMenu.template': '../templates/navMenu.template'
+        'navMenu.template': '../templates/navMenu.template',
+        'studentEdit.template': '../templates/studentEdit.template',
+        'studentsPage.template': '../templates/studentsPage.template'
     }, 
 
     shim: {
@@ -51,13 +53,14 @@
         'student.template': { deps: ['runtime'] },
         'info.template': { deps: ['runtime'] },
         'backbone.localstorage': { deps: ['backbone'] },
-        'lecturesPage.template': { deps: ['runtime'] },
         'lecture.template': { deps: ['runtime'] },
         'studentPersonal.template': { deps: ['runtime'] },
         'lectureDetail.template': { deps: ['runtime'] },
         'lectorDetail.template': { deps: ['runtime'] },
         'lector.template': { deps: ['runtime'] },
-        'navMenu.template': { deps: ['runtime'] }
+        'navMenu.template': { deps: ['runtime'] },
+        'studentEdit.template': { deps: ['runtime']},
+        'studentsPage.template': { deps: ['runtime']}
     }
 });
 

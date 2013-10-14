@@ -105,14 +105,6 @@ table {
 .header__lectors.active{
     border-color: rgb(0,130,200);
 }
-.info {
-    background: #ffffff;
-    padding: 15px 20px;
-    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.2);
-    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.2);
-    box-shadow: 0 0 5px rgba(0,0,0,0.2);
-    width: 800px;
-}
 .info__title {
     font-size: 24px;
 }
@@ -136,24 +128,21 @@ table {
 }
 .personal__title {
     font-size: 24px;
-    margin: 15px 0;
+    margin-bottom: 20px;
+    margin-top: 5px
+}
+.personal{
+    display:table;
+    position: relative;
+    width: 100%;
 }
 .container_info_about {
     margin: 0 0 0 290px;
     
     line-height: 1.4em;
     font-size: 14px;
-}
-.personal__container {
-    background: #ffffff;
-    padding: 15px 20px;
-    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.2);
-    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.2);
-    box-shadow: 0 0 5px rgba(0,0,0,0.2);
-    display: table;
-    width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 460px;
+    overflow: hidden;
 }
 .personal__container_info {
     float:left;
@@ -196,14 +185,30 @@ table {
     margin-top: 15px;
     font-size: 12px;
 }
-.lecturesPage__lectures {
+.personal__edit-button,
+ .personal__del-button{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url(../img/edit_button.png);
+    right: 35px;
+    top: 5px;
+    opacity: 0.3;
+}
+.personal__edit-button:hover,
+.personal__del-button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+ .personal__del-button{
+    right:5px;
+    background: url(../img/del.png);
+ }
+.lecturesPage {
     padding: 0;
-    max-width: 800px;
+    width: 790px;
     margin-left: auto;
     margin-right: auto;
-}
-.lecturesPage {
-    display: block;
 }
 .lecturesPage__lecture{
     background: #ffffff;
@@ -214,7 +219,7 @@ table {
     border-style: solid;
     border-color: rgba(200,200,200,0.3); 
     margin: 3px;
-    width: 362px;
+    width: 378px;
     height: 65px;
     display: inline-block;
 }
@@ -239,14 +244,7 @@ table {
     
     text-decoration: underline;
 }
-.lectureDetail_container {
-    background: #ffffff;
-    padding: 15px 20px;
-    box-shadow: 0 0px 5px rgba(0,0,0,0.2);
-    -webkit-box-shadow: 0 0px 5px rgba(0,0,0,0.2);
-    -moz-box-shadow: 0 0px 5px rgba(0,0,0,0.2);
-    width: 800px;
-}
+
 .lectureDetail__photo{
     width: 170px;
 }
@@ -257,8 +255,8 @@ table {
     width:170px;
 }
 .lectureDetail_slideshare{
-    width:800px;
-    height: 635px;
+    width:748px;
+    height: 600px;
     
 }
 .lectureDetail_about{
@@ -292,11 +290,24 @@ table {
 }
     
     
+.studentPage__add-button {
+    margin-top: -30px;
+    padding: 5px;
+    position:absolute;
+    right: 35px;
+    color: rgb(100,100,100);
+    border: 1px solid rgb(200, 200, 200);
+    background-color: rgb(220, 220, 220);
+    font-size: 12px;
+    cursor: pointer;
+    margin-right: -12px;
+}
 .peoplePage {
     padding: 0;
-    width: 800px;
+    width: 790px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
 }
 .person {
     display: inline-block;
@@ -348,13 +359,7 @@ table {
     display: block;
 }
 .lectorDetail {
-    background: #ffffff;
-    padding: 15px 20px;
-    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.2);
-    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.2);
-    box-shadow: 0 0 5px rgba(0,0,0,0.2);
     display: table;
-    width: 800px;
 }
 .lectorDetail__list-item {
     display: block;
@@ -405,6 +410,43 @@ table {
     width: 16px;
     height: 16px;
 }
+.personalEdit {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+.line-edit,
+.textarea-edit {
+    width:100%;
+    margin-top: 6px;
+    margin-bottom: 18px;
+    padding: 5px;
+    color: rgb(70,70,70)
+}
+.edit-container__label {
+    font-size: 13px;
+}
+.textarea-edit {
+    height: 100px;
+    max-width: 100%;
+}
+.buttons {
+    text-align: right;
+}
+.button {
+    border: 1px solid rgb(200, 200, 200);
+    background-color: rgb(220, 220, 220);
+    width: 120px;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+    height: 25px;
+    line-height: 28px;
+    margin: 10px 10px 0 0;
+    display: inline-block;
+    color: rgb(100,100,100);
+}
 html {
     height: 100%;
     width: 100%;
@@ -420,8 +462,16 @@ body {
     height: auto !important;
     height: 100%;
 }
+.mainContent {
+    margin-right: 30px;
+    margin-left: 30px;
+}
 .classBook {
-    padding-bottom: 70px;   
+    padding-bottom: 10px; 
+    float:left;  
+    margin-right: 20px;
+    margin-left: auto;
+    margin-right: auto
 }
 .link {
 	color: rgb(130, 130, 130);
@@ -432,7 +482,19 @@ body {
     margin-bottom: 15px;
 }
 .content{
-    
-    margin-left: auto;
-    margin-right: auto;
+    padding: 15px 20px;
+    background: #ffffff;
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    width: 750px;
+}
+.twitter-timeline {
+    height:  500px;
+    width: 300px; 
+}
+.twitter__container {
+    width:20%;
+    float: left;
+    padding-left: 30px;
 }
