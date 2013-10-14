@@ -1,9 +1,24 @@
+.studentPage__add-button {
+    margin-top: -30px;
+    padding: 5px;
+    position:absolute;
+    right: 35px;
+    color: rgb(100,100,100);
+    border: 1px solid rgb(200, 200, 200);
+    background-color: rgb(220, 220, 220);
+    font-size: 12px;
+    cursor: pointer;
+    margin-right: -12px;
+}
+
+
 
 .peoplePage {
     padding: 0;
     width: 790px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
 }
 
 .person {
@@ -25,13 +40,6 @@
 }
 
 
-/*.person__container:hover  {
-    -webkit-box-shadow: 0 0 10px rgba(255,204,0,0.5);
-    -moz-box-shadow: 0 0 10px rgba(255,204,0,0.5);
-    box-shadow: 0 0 10px rgba(255,204,0,0.5);
-    border-color: rgba(255,224,0,1); 
-    cursor: pointer;
-}*/
 
 .person__container:hover .person__name-container_name {
     text-decoration: underline;

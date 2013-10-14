@@ -4,9 +4,12 @@ match / {
     <div class="personal">
         <h1 class="personal__title">{ .first_name } {.last_name}</h1>
         <div class="personal__edit-button" title="Редактировать"></div>
+        <div class="personal__del-button" title="Удалить"></div>
             <div class = "personal__container_info">
                 if .link_photo !="" {
                       <div class = "photo_container"><img class = "container_info_photo"  src="{ .link_photo }" alt="{ .first_name} {.last_name }"/></div> 
+                } else {
+                     <div class = "photo_container"><img class = "container_info_photo"  src="img/defaultPhoto.jpg" alt="{ .first_name} {.last_name }"/></div>     
                 }
             <div class = "personal__container_contacts">
                     if .link_facebook {

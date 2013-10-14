@@ -5,6 +5,7 @@ define('AppRouter', ['backbone', 'StudentsPageView', 'InfoView', 'StudentPersona
         routes: {
             'students': 'renderStudents',
             'lectures': 'renderLectures',
+            'students/add' : 'renderNewStudentEdit',
             'students/:student' : 'renderPersonalData',
             'lectures/:lecture' : 'renderLectureDetail',
             'lectors' : 'renderLectors',
@@ -107,7 +108,8 @@ define('AppRouter', ['backbone', 'StudentsPageView', 'InfoView', 'StudentPersona
             var studentM = App.studentsC.get(student);
             var name = studentM.get('first_name')+' '+ studentM.get('last_name');
             App.AppView.setContent(StudentEditView, {
-                 model: studentM
+                 model: studentM,
+                 mode: "edit"
              });
             App.AppView.Navigation.setNavigation("/students",
                 [{
@@ -122,6 +124,20 @@ define('AppRouter', ['backbone', 'StudentsPageView', 'InfoView', 'StudentPersona
                     title: "Редактирование"
                 }
             ]);
+        }, 
+
+        renderNewStudentEdit: function() {
+            App.AppView.setContent(StudentEditView, {mode: "create"});
+            App.AppView.Navigation.setNavigation("/students",
+                [{
+                    title: "Студенты",
+                    href: "#/students"
+                },
+                {
+                    title: "Добавление нового студента",
+                }
+            ]);
+
         }
        
        

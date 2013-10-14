@@ -6,7 +6,6 @@ define ('LecturesPageView', ['backbone', 'jquery', 'LectureView'], function(Back
         },
 
         render: function() {
-            $('.classBook').html(this.$el);
             this.collection.each(this.renderLecture, this); 
             return this;
         },
