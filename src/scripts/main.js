@@ -42,7 +42,8 @@
         'lectorDetail.template': '../templates/lectorDetail.template',
         'lector.template': '../templates/lector.template',
         'navMenu.template': '../templates/navMenu.template',
-        'studentEdit.template': '../templates/studentEdit.template'
+        'studentEdit.template': '../templates/studentEdit.template',
+        'studentsPage.template': '../templates/studentsPage.template'
     }, 
 
     shim: {
@@ -58,7 +59,8 @@
         'lectorDetail.template': { deps: ['runtime'] },
         'lector.template': { deps: ['runtime'] },
         'navMenu.template': { deps: ['runtime'] },
-        'studentEdit.template': { deps: ['runtime'] }
+        'studentEdit.template': { deps: ['runtime']},
+        'studentsPage.template': { deps: ['runtime']}
     }
 });
 

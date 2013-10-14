@@ -1,0 +1,5 @@
+﻿module "studentsPage"
+
+match / {
+    <div class="studentPage__add-button">Добавить студента</div>
+}

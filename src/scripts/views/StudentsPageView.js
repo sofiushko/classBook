@@ -1,10 +1,19 @@
-define ('StudentsPageView', ['backbone', 'jquery', 'StudentView'], function(Backbone, $, StudentView){
+define ('StudentsPageView', ['backbone', 'jquery', 'StudentView', 'StudentModel', 'studentsPage.template'], function(Backbone, $, StudentView, StudentModel){
     return Backbone.View.extend ({
         tagName: "div",
         className: "peoplePage",
 
+        initialize: function(){
+        },
+
+
+        events: {
+            'click .studentPage__add-button': 'addStudent',
+        },
+
         render: function() {
-            $('.classBook').html(this.$el);
+            var compiled_template = yr.run('studentsPage');
+            this.$el.html(compiled_template);
             this.collection.each(this.renderStudent, this); 
             return this;
         },
@@ -14,6 +23,11 @@ define ('StudentsPageView', ['backbone', 'jquery', 'StudentView'], function(Back
                 model:item
             });
             this.$el.append(studentView.render().el);
+        },
+
+/*-------navigate to edit page for new student---*/        
+        addStudent: function() {
+            Backbone.history.navigate('#/students/add', {trigger: true});
         }
 
     });
